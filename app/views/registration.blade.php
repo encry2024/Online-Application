@@ -15,6 +15,42 @@
 @endsection
 
 @section('body')
+<!-- BASIC DETAILS -->
+<div class="large-12 columns">
+	<h1 class="size-21 label-black">Basic Details</h1>
+</div>
+
+<div class="large-12 columns">
+	<div class="row">
+	
+		<div class="large-12 columns large-centered">
+			<div class="row">
+
+				<div class="large-4 columns">
+					<label>Position Desired</label>
+					{{ Form::text('positiondesired', '', array('class'=>'text-center radius', 'placeholder'=>'Enter your Desired Position')) }}
+				</div>
+
+				<div class="large-3 columns">
+					<label>Expected Salary</label>
+					{{ Form::text('expectedsalary', '', array('class'=>'text-center radius', 'placeholder'=>'Enter your Expected Salary')) }}
+				</div>
+
+				<div class="large-4 columns">
+					<label>Currently Employed?</label>
+					{{ Form::checkbox('yes', 'yes', null, ['class' => 'text-center']) }} <label> Yes </label>
+					{{ Form::checkbox('no', 'No', null, ['class' => 'text-center']) }} <label> No </label>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<br><br><br><br>
+</div>
+
+<!-- PERSONAL INFORMATION -->
+
 <div class="large-12 columns">
 	<h1 class="size-24 label-black">Personal Information</h1>
 </div>
@@ -43,7 +79,7 @@
 				</label>
 			</div>
 		</div>
-		
+		<!--  -->
 		<div class="row">
 			<div class="large-4 columns">
 				<label>Nick name
@@ -61,7 +97,7 @@
 				</label>
 			</div>
 		</div>
-	
+		<!--  -->
 		<div class="row">
 			<div class="large-12 columns">
 				<label>Address
@@ -69,7 +105,7 @@
 				</label>
 			</div>
 		</div>
-
+		<!--  -->
 		<div class="row">
 			<div class="large-4 columns">
 				<label>Religion</label>
@@ -84,7 +120,7 @@
 				{{ Form::text('civilstatus', '', array('class'=>'text-center radius', 'placeholder'=>'Enter your Civil Status')) }}
 			</div>
 		</div>
-		
+		<!--  -->
 		<div class="row">
 			<div class="large-4 columns">
 				<label>
@@ -93,15 +129,15 @@
 				</label>
 			</div>
 			<div class="large-4 columns">
-				<label>Date of Birth</label>
-				<input class="text-center radius" placeholder="Enter your Date of Birth" type="text" id="dp1" name="dateofbirth" onBlur="ageCount()"/>
+				<label>Date of Birth <i class="size-12">(format: 08/20/1900)</i></label>
+				<input class="text-center radius" placeholder="Enter your Date of Birth" type="text" id="dp1" name="dateofbirth" onchange="ageCount()"/>
 			</div>
 			<div class="large-4 columns">
 				<label>Age</label>
-				{{ Form::text('age', '', array('id'=>'age','class'=>'text-center radius', 'placeholder'=>'Enter your Date of Birth', 'readonly')) }}
+				{{ Form::text('age', '', array('id'=>'age','class'=>'text-center radius', 'placeholder'=>'Enter your Date of Birth', 'readonly', 'onchange'=>'javascript:checkAge()')) }}
 			</div>
 		</div>
-
+		<!--  -->
 		<div class="row">
 			<div class="large-12 columns">
 				<label>Place of Birth
@@ -109,7 +145,7 @@
 				</label>
 			</div>
 		</div>
-
+		<!--  -->
 		<div class="row">
 			<div class="large-6 columns">
 				<label>SSS No#
@@ -131,17 +167,16 @@
 @section('scripts')
 	<script type="text/javascript">
 		$('#dp1').fdatepicker({
-				format: 'dd/mm/yyyy',
+				format: 'mm/dd/yyyy',
 			});
 
-
-		function ageCount() {
+		function ageCount(dob) {
 			var date1 = new Date();
-			var dob = document.getElementById("dp1").value;
+			var dob = document.getElementById("dp1").value
 			var date2 = new Date(dob);
 			var pattern = /^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/;
 			//Regex to validate date format (dd/mm/yyyy)       
-			if (pattern.test(dob) === isNaN() ) {
+			if (pattern.test(dob) ) {
 				var y1 = date1.getFullYear();
 				//getting current year            
 				var y2 = date2.getFullYear();
@@ -149,12 +184,18 @@
 				var age = y1 - y2;
 				//calculating age                       
 				document.getElementById("age").value = age;
-				return true;
-			} else {
-			alert("Invalid date format. Please Input in (dd/mm/yyyy) format!");
-			return false;
-		}
 
-}
+				if (age < 18) {
+					alert("Invalid age. Legal age is only 18 and above.");
+					document.getElementsByName("dateofbirth").focus();
+					return false;
+				} else {
+					return true;
+				}
+			} else {
+				alert("Invalid date format. Please Input in (mm/dd/yyyy) format.");
+				return false;
+			}
+		}
 	</script>
 @endsection
