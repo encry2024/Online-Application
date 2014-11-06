@@ -21,7 +21,9 @@
 @section('body')
 <!-- BASIC DETAILS -->
 <div class="large-12 columns">
-	<h1 class="size-16 label-black">Basic Details<br>user ID - {{ Form::label('', '', ['id'=>'userid', 'class'=>'label-inblock']) }}</h1>
+	<h1 class="size-16 label-black">Basic Details
+	<br><br>
+	<label class="size-14 label-inblock">Your ID -</label> {{ Form::label('', '', ['id'=>'userid', 'class'=>'label-inblock']) }}</h1>
 
 </div>
 
@@ -379,16 +381,24 @@
 		// Get the locale date
 		function defaultValues() {
 			var text = "";
-			var possible = "A2BC8DEF08GHIJKL123MNO1PQRST4567UV7WXYZ9";
+			var numeric = "1234567890";
+			var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			var alphanumeric = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
 			var elem = document.getElementById("applicationdate");
 			var dte = new Date();
 			elem.value = dte.toLocaleDateString();
 
-			for( var i=0; i < 16; i++ ) {
+			for( var i=0; i < 12; i++ ) {
 				if ( i != 0 && i % 4 == 0 ) {
 					text += '-';
 				}
-			text += possible.charAt(Math.floor(Math.random() * possible.length));
+				if ( i < 4) {
+					text += numeric.charAt(Math.floor(Math.random() * numeric.length));
+				} else if (i < 8 ) {
+					text += alpha.charAt(Math.floor(Math.random() * alpha.length));
+				} else if (i <= 12 ) {
+					text += alphanumeric.charAt(Math.floor(Math.random() * alphanumeric.length));
+				} 
 			}
 			document.getElementById("userid").innerHTML = text;
 		}
