@@ -21,7 +21,7 @@
 		Northstar Solutions Inc.
 	</TITLE>
 
-	<body @yield('setScript')>
+	<body @yield('script')>
 		{{ HTML::script('packages/foundation-5.4.7/js/vendor/jquery.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/js/vendor/fastclick.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/js/foundation.min.js') }}
@@ -32,6 +32,7 @@
 		{{ HTML::script('datepicker/datepicker/js/bootstrap-datepicker.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/datepicker/custom.modernizr.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/datepicker/foundation-datepicker.js') }}
+		{{ HTML::script('packages/jscripts/moment.js') }}
 
 		@yield('body')
 		@yield('scripts')
