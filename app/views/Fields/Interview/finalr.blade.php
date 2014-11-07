@@ -42,3 +42,24 @@
 <h1 class="size-24 text-center">Recruitment Supervisor</h1>
 <h1></h1>
 <label class="text-center"><i>(Signature over printed name & Date)</i></label>
+<br><br>
+<label>
+<i>
+I agree to submit all relevant documents that may be required from me. In addition, I understand that as part of your screening procedure, an investigative report about my background may be made. Upon written request, I may obtain further information about the nature of and scope of this inquiry.
+
+I understand that my employment is contingent upon several factors, including satisfactory results of the following: background and reference checks and pre-employment medical examination. 
+
+All representations by me in this information sheet are true and correct to the best of my knowledge and belief, and I have not knowingly omitted any related information of an adverse nature. Inaccurate information may make me ineligible for employment.
+</i>
+</label>
+<br>
+<div class="row">
+	<div class="large-4 columns">
+		<h1></h1>
+		<label class="text-center">Date</label>
+	</div>
+		<div class="large-6 columns">
+		<h1></h1>
+		<label class="text-center">Signature over Printed name</label>
+	</div>
+</div>
