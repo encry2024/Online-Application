@@ -13,7 +13,7 @@
 </div>
 @endsection
 
-@section('script')
+@section('setScript')
 	onLoad="defaultValues()"
 @endsection
 

@@ -21,7 +21,7 @@
 		Northstar Solutions Inc.
 	</TITLE>
 
-	<body @yield('script')>
+	<body @yield('setScript')>
 		{{ HTML::script('packages/foundation-5.4.7/js/vendor/jquery.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/js/vendor/fastclick.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/js/foundation.min.js') }}
