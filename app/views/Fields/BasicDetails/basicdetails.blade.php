@@ -21,7 +21,7 @@
 
 	<div class="large-4 columns">
 		<label>Date of Application</label>
-		<input class="text-center radius" placeholder="Enter your Date of Birth" type="text" id="applicationdate" name="dateofbirth" readonly />
+		<input class="text-center radius" placeholder="Enter your Date of Birth" type="text" id="applicationdate" name="dateofapplication" readonly />
 	</div>
 </div>
 
@@ -53,6 +53,6 @@
 
 	<div class="large-4 columns">
 		<label>Referred By:</label>
-		{{ Form::text('source', '', array('class'=>'text-center radius', 'placeholder'=>'Who introduced the company?')) }}
+		{{ Form::text('referred', '', array('class'=>'text-center radius', 'placeholder'=>'Who introduced the company?')) }}
 	</div>
 </div>

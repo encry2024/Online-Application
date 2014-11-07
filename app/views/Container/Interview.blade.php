@@ -12,6 +12,8 @@
 		<div class="large-12 columns large-centered">
 			@include('Fields.Interview.hrInterview')
 			@include('Fields.Interview.operationsInterview')
+			@include('Fields.Interview.jo')
+			@include('Fields.Interview.finalR')
 		</div>
 	</div>
 </div>
