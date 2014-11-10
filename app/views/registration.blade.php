@@ -18,6 +18,11 @@
 @endsection
 
 @section('body')
+	{{ Form::open(array('url'=>'register')) }}
+
+	<!-- ERROR CONTAINER START -->
+	@include('Container.errorContainer')
+	<!-- ERROR CONTAINER END -->
 
 	<!-- BASIC CONTAINER START -->
 	@include('Container.BasicDetails')
@@ -43,6 +48,15 @@
 	@include('Container.Interview')
 	<!-- INTERVIEW CONTAINER END -->
 
+	
+	<div class="large-12 columns">
+		<div class="row">
+		<br><br><br>
+			{{ Form::submit('Register', ['class'=>'large-2 success button radius right']) }}
+		</div>
+	</div>
+
+	{{ Form::close() }}
 @endsection
 
 @section('scripts')
@@ -109,8 +123,10 @@
 				} else {
 					return true;
 				}
+
 			} else {
 				alert("Invalid date format. Please Input in (mm/dd/yyyy) format.");
+				document.getElementById("age").value = "";
 				return false;
 			}
 		}

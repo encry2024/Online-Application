@@ -11,6 +11,7 @@
 |
 */
 
+#GET
 Route::get('/', function() {
 	return View::make('index');
 });
@@ -20,9 +21,12 @@ Route::get('/registration', function() {
 });
 
 
+
+
+#POST
 Route::post('authenticate', function() {
 	$login = User::validateLogin(Input::all());
 	return $login;
 });
 
-Route::post('register', 'UserController@registerUser');
+Route::post('register', 'ApplicantController@registerApplicant');

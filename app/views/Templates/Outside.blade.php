@@ -1,6 +1,6 @@
 
-<HTML lang="en">
-	<HEAD>
+<html lang="en">
+	<head>
 		{{ HTML::script('packages/foundation-5.4.7/js/vendor/modernizr.js') }}
 		{{ HTML::style('packages/foundation-5.4.7/css/foundation.css') }}
 		{{ HTML::style('packages/foundation-5.4.7/css/foundation.min.css') }}
@@ -15,11 +15,11 @@
 
 		@yield('head')
 
-	</HEAD>
+	</head>
 
-	<TITLE>
-		Northstar Solutions Inc.
-	</TITLE>
+	<title>
+		Northstar Solutions Inc - Registration Form
+	</title>
 
 	<body @yield('setScript')>
 		{{ HTML::script('packages/foundation-5.4.7/js/vendor/jquery.js') }}
@@ -42,4 +42,4 @@
 		</script>
 		
 	</body>
-</HTML>
+</html>

@@ -5,21 +5,24 @@
 <div class="row">
 	<div class="large-3 columns">
 		<label>Position Desired</label>
-		{{ Form::text('positiondesired_1', '', array('class'=>'text-center radius', 'placeholder'=>'Enter your Desired Position')) }}
+		{{ Form::text('positiondesired_1', '', array('class'=>'text-center error radius', 'placeholder'=>'Enter your Desired Position')) }}
+		@if ($errors->has('positiondesired_1')) <small class="error">{{ $errors->first('positiondesired_1') }}</small> @endif
 	</div>
 
 	<div class="large-3 columns">
 		<label>Expected Salary</label>
-		{{ Form::text('expectedsalary', '', array('class'=>'text-center radius', 'placeholder'=>'Enter your Expected Salary')) }}
+		{{ Form::text('expectedsalary', '', array('class'=>'text-center error radius', 'placeholder'=>'Enter your Expected Salary')) }}
+		@if ($errors->has('expectedsalary')) <small class="error">{{ $errors->first('expectedsalary') }}</small> @endif
 	</div>
 
-	<div class="large-2 columns">
+	<div class="large-3 columns">
 		<label>Currently Employed?</label>
-		{{ Form::checkbox('cemployed[1]', 'yes', null, ['class' => 'text-center text-center']) }} <label class="mTop-07 text-center"> Yes </label>
-		{{ Form::checkbox('cemployed[1]', 'No', null, ['class' => 'text-center text-center']) }} <label class="mTop-07 text-center"> No </label>
+		{{ Form::checkbox('cemployed', 'yes', null, ['class' => 'text-center mrgin-07']) }} <label class="mTop-07"> Yes </label>
+		{{ Form::checkbox('cemployed', 'No', null, ['class' => 'text-center mrgin-07']) }} <label class="mTop-07"> No </label>
+		@if ($errors->has('cemployed')) <small class="error">{{ $errors->first('cemployed') }}</small> @endif
 	</div>
 
-	<div class="large-4 columns">
+	<div class="large-3 columns">
 		<label>Date of Application</label>
 		<input class="text-center radius" placeholder="Enter your Date of Birth" type="text" id="applicationdate" name="dateofapplication" readonly />
 	</div>
@@ -33,10 +36,10 @@
 </div>
 
 <div class="row">
-	<div class="large-6 columns">
+	<div class="large-4 columns">
 		<label>Previously Applied Here?</label>
-		{{ Form::checkbox('previouslyApp[1]', 'Yes', null, ['id'=>'y_id','class' => 'text-center', 'onclick'=>'enableTbReason()']) }} Yes, <label class="mTop-07 text-center"> {{ Form::text('reason_1', '', ['class'=>'text-center radius', 'placeholder'=>'State the Date', 'id'=>'dp2', 'disabled']) }} </label>
-		{{ Form::checkbox('previouslyApp[1]', 'No', null, ['id'=>'n_id', 'class' => 'text-center', 'onclick'=>'disableTbReason()']) }} <label class="mTop-07 text-center">No </label>
+		{{ Form::checkbox('previouslyApp', 'Yes', null, ['id'=>'y_id','class' => 'text-center', 'onclick'=>'enableTbReason()']) }} Yes, <label class="mTop-07 text-center"> {{ Form::text('stateDate', '', ['class'=>'text-center radius', 'placeholder'=>'State the Date', 'id'=>'dp2', 'disabled']) }} </label>
+		{{ Form::checkbox('previouslyApp', 'No', null, ['id'=>'n_id', 'class' => 'text-center', 'onclick'=>'disableTbReason()']) }} <label class="mTop-07 text-center">No </label>
 	</div>
 </div>
 

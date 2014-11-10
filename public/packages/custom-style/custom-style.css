@@ -4,6 +4,10 @@
 	font-size: 30;
 }
 
+.error-Message {
+	color: #ce0000;
+}
+
 .label-inblock {
 	display: inline-block;
 }
@@ -79,6 +83,10 @@
 	width: 20%;
 }
 
+.mrgin-07 {
+	margin: 0 0 0.7rem 0 !important;
+}
+
 
 /*PANEL STYLES*/
 .topBar-style {
@@ -93,7 +101,10 @@
 	background-color: transparent !important;
 }
 
-
+.error-Panel {
+	background-color: #fff5f5;
+	border-color: #ffe7e7;
+}
 
 
 

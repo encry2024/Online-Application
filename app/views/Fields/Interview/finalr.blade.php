@@ -38,11 +38,17 @@
 		<h1 class="large-12"></h1>
 	</div>
 </div>
+
 <br>
+
 <h1 class="size-24 text-center">Recruitment Supervisor</h1>
+
 <h1></h1>
+
 <label class="text-center"><i>(Signature over printed name & Date)</i></label>
+
 <br><br>
+
 <label>
 <i>
 I agree to submit all relevant documents that may be required from me. In addition, I understand that as part of your screening procedure, an investigative report about my background may be made. Upon written request, I may obtain further information about the nature of and scope of this inquiry.

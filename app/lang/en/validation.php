@@ -21,6 +21,9 @@ return array(
 	"alpha_num"            => "The :attribute may only contain letters and numbers.",
 	"array"                => "The :attribute must be an array.",
 	"before"               => "The :attribute must be a date before :date.",
+	"alpha_space"    	   => "The :attribute may only contain letters and spaces.",
+	"alpha_space_dash"	   => "The :attribute may only contain letters, spaces, and dash",
+	"numeric-dash"		   => "The :attribute may only contain numbers and dash",
 	"between"              => array(
 		"numeric" => "The :attribute must be between :min and :max.",
 		"file"    => "The :attribute must be between :min and :max kilobytes.",
@@ -81,7 +84,6 @@ return array(
 	| specify a specific custom language line for a given attribute rule.
 	|
 	*/
-
 	'custom' => array(
 		'attribute-name' => array(
 			'rule-name' => 'custom-message',

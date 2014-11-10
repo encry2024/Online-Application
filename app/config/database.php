@@ -60,7 +60,7 @@ return array(
 			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
-			'prefix'    => 'inv_',
+			'prefix'    => 'app_',
 		),
 
 		'pgsql' => array(
