@@ -2,7 +2,8 @@
 
 
 
-<h1 class="size-24 text-center">GRADUATE STUDIES</h1>
+<h1 class="size-24 text-center">GRADUATE STUDIES<br>
+<i class="size-12">(optional)</i></h1>
 <div class="row">
 	<div class="large-6 columns">
 		<label>School</label>

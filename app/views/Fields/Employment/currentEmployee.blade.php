@@ -1,13 +1,15 @@
 
 
 
-
+<h1 class="size-24 text-center">CURRENT EMPLOYER</h1>
+<!--  -->
 <div class="row">
 	<div class="large-12 columns">
 		<label>Have you been dismissed by any of your former employers for any administrative or just cause? If: </label>
-		{{ Form::checkbox('state[1]', 'Yes', null, ['id'=>'y_state','class' => 'text-center', 'onclick'=>'enableTbReason_2()']) }} <label class="mTop-07">Yes</label>
-		{{ Form::checkbox('state[1]', 'No', null, ['id'=>'n_state', 'class' => 'text-center', 'onclick'=>'disableTbReason_2()']) }} <label class="mTop-07">No </label>
-		{{ Form::text('reason_2', '', ['id'=>'reason_2', 'class'=>'radius', 'placeholder'=>'State your details here', 'disabled']) }}
+		{{ Form::checkbox('state_1', 'Yes', null, ['id'=>'y_state','class' => 'text-center', 'onclick'=>'enableTbReason_2()']) }} <label class="mTop-07">Yes</label>
+		{{ Form::checkbox('state_1', 'No', null, ['id'=>'n_state', 'class' => 'text-center', 'onclick'=>'disableTbReason_2()']) }} <label class="mTop-07">No </label>
+		{{ Form::text('reason_2', '', ['id'=>'reason_2', 'class'=>'error radius', 'placeholder'=>'State your details here', 'disabled']) }}
+		@if ($errors->has('state_1')) <small class="error">{{ $errors->first('state_1') }}</small> @endif
 	</div>
 </div>
 <!--  -->
@@ -15,18 +17,22 @@
 	<div class="large-3 columns">
 		<label>Current Employer</label>
 		{{ Form::text('cemployer', '', ['class'=>'text-center radius', 'placeholder'=>'Name of your Current Employer']) }}
+		@if ($errors->has('cemployer')) <small class="error">{{ $errors->first('cemployer') }}</small> @endif
 	</div>
 	<div class="large-3 columns">
 		<label>Position</label>
 		{{ Form::text('position', '', ['class'=>'text-center radius', 'placeholder'=>'Current Employer Position']) }}
+		@if ($errors->has('position')) <small class="error">{{ $errors->first('position') }}</small> @endif
 	</div>
 	<div class="large-3 columns">
 		<label>Inclusive Dates</label>
 		{{ Form::text('incdates', '', ['class'=>'text-center radius', 'placeholder'=>'Enter Inclusive Dates']) }}
+		@if ($errors->has('incdates')) <small class="error">{{ $errors->first('incdates') }}</small> @endif
 	</div>
 	<div class="large-3 columns">
 		<label>Base Salary/Month</label>
 		{{ Form::text('bsalarymonth', '', ['class'=>'text-center radius', 'placeholder'=>'Base Salary/Month']) }}
+		@if ($errors->has('bsalarymonth')) <small class="error">{{ $errors->first('bsalarymonth') }}</small> @endif
 	</div>
 </div>
 <!--  -->
@@ -34,12 +40,14 @@
 	<div class="large-12 columns">
 		<label>Address</label>
 		{{ Form::text('employeraddress_1', '', array('class'=>'text-center radius', 'placeholder'=>'Current Employer Address')) }}
+		
 	</div>
 </div>
 <!--  -->
 <div class="row">
 	<div class="large-12 columns">
 		<label>Other Cash Compensation</label>
-		{{ Form::text('cashcompensation_1', '', array('class'=>'text-center radius', 'placeholder'=>'Other Cash Compensation')) }}
+		{{ Form::text('cashcompensation_1', '', array('class'=>'error text-center radius', 'placeholder'=>'Other Cash Compensation')) }}
+		@if ($errors->has('cashcompensation_1')) <small class="error">{{ $errors->first('cashcompensation_1') }}</small> @endif
 	</div>
 </div>

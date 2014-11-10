@@ -24,12 +24,12 @@
 <!--  -->
 <div class="row">
 	<div class="large-4 columns">
-		<label>Nick name</label>
+		<label>Nick name<i class="size-12">(optional)</i></label>
 		{{ Form::text('nickname', '', array('class'=>'text-center radius', 'placeholder'=>'Enter your Nickname')) }}
 	</div>
 
 	<div class="large-4 columns">
-		<label>Home Tel.</label>
+		<label>Home Tel. <i class="size-12">(optional)</i></label>
 		{{ Form::text('hometel', '', array('class'=>'error text-center radius', 'placeholder'=>'Enter your Telephone No#')) }}
 		@if ($errors->has('hometel')) <small class="error">{{ $errors->first('hometel') }}</small> @endif
 	</div>
