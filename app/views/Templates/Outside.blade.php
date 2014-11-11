@@ -12,6 +12,9 @@
 		{{ HTML::style('packages/foundation-5.4.7/datepicker/example.css') }}
 		{{ HTML::style('packages/foundation-5.4.7/datepicker/example.html') }}
 		{{ HTML::style('packages/foundation-5.4.7/datepicker/foundation-datepicker.css') }}
+		{{ HTML::style('range-datepicker/css/dateRangePicker.css') }}
+		{{ HTML::style('tiny-datepicker/css/jquery.datepicker.css') }}
+		
 
 		@yield('head')
 
@@ -33,6 +36,11 @@
 		{{ HTML::script('packages/foundation-5.4.7/datepicker/custom.modernizr.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/datepicker/foundation-datepicker.js') }}
 		{{ HTML::script('packages/jscripts/moment.js') }}
+		{{ HTML::script('range-datepicker/js/jquery.dateRangePicker.js') }}
+		{{ HTML::script('range-datepicker/js/jquery.dateRangePicker.min.js') }}
+		{{ HTML::script('tiny-datepicker/js/jquery.datepicker.js') }}
+		{{ HTML::script('tiny-datepicker/js/jquery.datepicker.min.js') }}
+		{{ HTML::script('packages/dist/js/bootstrap.js') }}
 
 		@yield('body')
 		@yield('scripts')

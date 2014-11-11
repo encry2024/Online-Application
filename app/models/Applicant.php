@@ -137,21 +137,26 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 				->withErrors($validation)->withInput();
 		} else {
 			$applicant = new Applicant;
+
+			// BASIC DETAILS SECTION
+
 			$applicant->positiondesired_1 = $data['positiondesired_1'];
 			$applicant->expectedsalary = $data['expectedsalary'];
 			$applicant->cemployed_1 = $data['cemployed'];
 			$applicant->positiondesired_2 = $data['positiondesired_2'];
 			$applicant->previouslyApp_1 = $data['previouslyApp'];
 
-			if ( Input::get('stateDate') == "" ) { 
-				$applicant->stateDate = ""; 
-			} else { 
-				$applicant->stateDate = $data['stateDate']; 
-			}
+			if ( Input::get('stateDate') == "" ) 
+				{ $applicant->stateDate = ""; } 
+			else 
+				{ $applicant->stateDate = $data['stateDate']; }
 
-			$applicant->nprequired = $data['nprequired'];
+			$applicant->nprequired = date('m/d/Y', strtotime($_POST["from-date"])) . " to " . date('m/d/Y', strtotime($_POST["to-date"]));
 			$applicant->source = $data['source'];
 			$applicant->referred = $data['referred'];
+
+			// PERSONAL INFORMATION SECTION
+
 			$applicant->lastname = $data['lastname'];
 			$applicant->firstname = $data['firstname'];
 			$applicant->middle = $data['middle'];
@@ -168,6 +173,9 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 			$applicant->placeofbirth = $data['placeofbirth'];
 			$applicant->sss = $data['sss'];
 			$applicant->tin = $data['tin'];
+
+			// EDUCATION INFORMATION SECTION
+
 			$applicant->hsname = $data['hsname'];
 			$applicant->hseductitle = $data['hseductitle'];
 			$applicant->hsschooladdress = $data['hsschooladdress'];
@@ -183,6 +191,9 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 			$applicant->gradschooladdress = $data['gradschooladdress'];
 			$applicant->graddateattended = $data['graddateattended'];
 			$applicant->gradgraduate_1 = $data['gradgraduate_1'];
+
+			// FAMILY INFORMATION SECTION
+
 			$applicant->famname1 = $data['famname1'];
 			$applicant->famname2 = $data['famname2'];
 			$applicant->famname3 = $data['famname3'];
@@ -212,21 +223,20 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 			$applicant->famphn3 = $data['famphn3'];
 			$applicant->famphn4 = $data['famphn4'];
 			$applicant->famphn5 = $data['famphn5'];
+			
 			$applicant->chkbx_1 = $data['chkbx'];
-
-			if ( Input::get('rsn') == "" ) { 
-				$applicant->rsn = ""; 
-			} else { 
-				$applicant->rsn = $data['rsn']; 
-			}
+			if ( Input::get('rsn') == "" ) 
+				{ $applicant->rsn = ""; } 
+			else 
+				{ $applicant->rsn = $data['rsn']; }
 
 			$applicant->chkbx_2 = $data['chkbx_2'];
+			if ( Input::get('rsn_2') == "" ) 
+				{ $applicant->rsn_2 = ""; } 
+			else 
+				{ $applicant->rsn_2 = $data['rsn_2']; }
 
-			if ( Input::get('rsn_2') == "" ) { 
-				$applicant->rsn_2 = ""; 
-			} else { 
-				$applicant->rsn_2 = $data['rsn_2']; 
-			}
+			// CHARACTER REFERENCE SECTION
 
 			$applicant->nme1 = $data['nme1'];
 			$applicant->nme2 = $data['nme2'];
@@ -239,11 +249,12 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 			$applicant->addcon3 = $data['addcon3'];
 			$applicant->state_1 = $data['state_1'];
 			
-			if ( Input::get('reason_2') == "" ) { 
-				$applicant->rsn_2 = ""; 
-			} else { 
-				$applicant->rsn_2 = $data['reason_2']; 
-			}
+			// EMPLOYMENT INFORMATION SECTION
+
+			if ( Input::get('reason_2') == "" ) 
+				{ $applicant->rsn_2 = ""; } 
+			else 
+				{ $applicant->rsn_2 = $data['reason_2']; }
 
 			$applicant->cemployer = $data['cemployer'];
 			$applicant->position = $data['position'];
@@ -267,61 +278,34 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 			$applicant->phonenumber_2 = $data['phonenumber_2'];
 			$applicant->pempemployeraddress_2 = $data['pempemployeraddress_2'];
 			$applicant->pempcashcompensation_2 = $data['pempcashcompensation_2'];
-
 			$applicant->save();
+
 			//Get Applicant id
 			$applicant_id = $applicant->id;
 			$dateOfApplication = $applicant->created_at;
+
 			//Search Applicant by id
 			$updateApplicant = Applicant::find($applicant_id);
-			//Update Applicants applicant_id..
-			//Insert date of application..
+
+			//Pass the searched ID on the function Applicant::getId
+			//and update the column applicant_id
 			$updateApplicant->applicant_id = Applicant::getId($applicant_id);
+
+			//Get the value from variable $dateOfApplication
+			//and format it into m/d/Y date format and update the column dateofapplication
 			$updateApplicant->dateofapplication = date('m/d/Y', strtotime($dateOfApplication));
 			$updateApplicant->save();
-		
-			var_dump(Applicant::getId($applicant_id));
-			var_dump($data['positiondesired_1']);
-			var_dump($data['expectedsalary']);
-			var_dump($data['cemployed']);
-			var_dump($data['positiondesired_2']);
-			var_dump($data['previouslyApp']);
-			var_dump($data['nprequired']);
-			var_dump($data['source']);
-			var_dump($data['referred']);
-			var_dump($data['lastname']);
-			var_dump($data['firstname']);
-			var_dump($data['middle']);
-			var_dump($data['nickname']);
-			var_dump($data['hometel']);
-			var_dump($data['mobiletel']);
-			var_dump($data['address']);
-			var_dump($data['religion']);
-			var_dump($data['gender']);
-			var_dump($data['civilstatus']);
-			var_dump($data['email']);
-			var_dump($data['dateofbirth']);
-			var_dump($data['age']);
-			var_dump($data['placeofbirth']);
-			var_dump($data['sss']);
-			var_dump($data['tin']);
-			var_dump($data['hsname']);
-			var_dump($data['hseductitle']);
-			var_dump($data['hsschooladdress']);
-			var_dump($data['hsdateattended']);
-			var_dump($data['hsgraduate']);
-			var_dump($data['collegename']);
-			var_dump($data['collegeeductitle']);
-			var_dump($data['collegeschooladdress']);
-			var_dump($data['collegedateattended']);
-			var_dump($data['collegegraduate']);
-			var_dump($data['gradschoolname']);
-			var_dump($data['gradeductitle']);
-			var_dump($data['gradschooladdress']);
-			var_dump($data['graddateattended']);
-			var_dump($data['gradgraduate_1']);
-			var_dump($data['chkbx']);
-			var_dump($data['chkbx_2']);
+
+			//Get Applicants Full Name and Applicant_ID
+			$applicantInfo = Applicant::find($applicant_id);
+			$getApplicant_LastName = $applicantInfo->lastname;
+			$getApplicant_MiddleName = $applicantInfo->middle;
+			$getApplicant_FirstName = $applicantInfo->firstname;
+			$getApplicant_ApplicantId = $applicantInfo->applicant_id;
+
+			$audits = New Audit;
+			$audits->history = "Applicant " . $getApplicant_LastName . " " . $getApplicant_MiddleName . " " . $getApplicant_FirstName . " has been registered successfully. (Applicant ID: " . $getApplicant_ApplicantId . ") ";
+			$audits->save();
 		}
 	}
 }

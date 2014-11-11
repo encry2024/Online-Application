@@ -75,12 +75,12 @@
 	</div>
 	<div class="large-4 columns">
 		<label>Date of Birth <i class="size-12">(format: 08/20/1900)</i></label>
-		<input class="error text-center radius" placeholder="Enter your Date of Birth" type="text" id="dp1" name="dateofbirth" onchange="getAge()"/>
+		<input class="drp-element error text-center radius" placeholder="Enter your Date of Birth" type="text" id="dp1" name="dateofbirth" onchange="getAge()"/>
 		@if ($errors->has('dateofbirth')) <small class="error">{{ $errors->first('dateofbirth') }}</small> @endif
 	</div>
-	<div class="large-4 columns">
+	<div class="large-2 columns left">
 		<label>Age</label>
-		{{ Form::text('age', '', array('id'=>'age','class'=>'text-center radius', 'placeholder'=>'Enter your Date of Birth', 'readonly', 'onchange'=>'javascript:checkAge()')) }}
+		{{ Form::text('age', '', array('id'=>'age','class'=>'text-center radius', 'readonly', 'onchange'=>'javascript:checkAge()')) }}
 	</div>
 </div>
 <!--  -->

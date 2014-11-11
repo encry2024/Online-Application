@@ -52,10 +52,10 @@
 	<div class="large-12 columns">
 		<div class="row">
 		<br><br><br>
-			{{ Form::submit('Register', ['class'=>'large-2 success button radius right']) }}
+			{{ Form::submit('Register', ['class'=>'large-2 success button radius right', 'id'=>'register']) }}
 		</div>
 	</div>
-
+	<div class="drp-overlay"></div>
 	{{ Form::close() }}
 @endsection
 
@@ -131,6 +131,14 @@
 			}
 		}
 		
+		$(document).ready(function() {
+			$('#npDate').DateRangePicker({
+				startDate: '2014-11-11',
+				endDate: '2015-12-31'
+			});
+		});
+
+
 		function enableTbReason() {
 			if(document.getElementById('y_id').checked) {
 				document.getElementById('dp2').disabled = false;

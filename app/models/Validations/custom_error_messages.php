@@ -19,6 +19,7 @@ $messages = array(
 	'civilstatus.required' => 'Please provide your Civil Status',
 	'email.required' => 'Please provide your E-mail Address',
 	'dateofbirth.required' => 'Please provide your Date of Birth',
+	'dateofbirth.before' => 'Only 18 and above are allowed to register',
 	'placeofbirth.required' => 'Please provide your Birthplace',
 	'sss.required' => 'You need to provide your SSS',
 	'sss.alpha_dash' => 'SSS field only accepts Letters, Numbers, and dashes',

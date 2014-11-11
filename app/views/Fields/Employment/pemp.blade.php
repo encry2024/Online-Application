@@ -17,7 +17,7 @@
 	</div>
 	<div class="large-3 columns">
 		<label>Inclusive Dates</label>
-		{{ Form::text('pempincdates', '', ['class'=>'text-center radius', 'placeholder'=>'Enter Inclusive Dates']) }}
+		{{ Form::text('pempincdates', '', ['id'=>'pempincdates', 'class'=>'text-center radius', 'placeholder'=>'Enter Inclusive Dates']) }}
 	</div>
 	<div class="large-3 columns">
 		<label>Base Salary/Month</label>

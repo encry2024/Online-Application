@@ -36,9 +36,9 @@
 </div>
 
 <div class="row">
-	<div class="large-4 columns">
+	<div class="large-5 columns">
 		<label>Previously Applied Here?</label>
-		{{ Form::checkbox('previouslyApp', 'Yes', null, ['id'=>'y_id','class' => 'text-center', 'onclick'=>'enableTbReason()']) }} Yes, <label class="mTop-07 text-center"> {{ Form::text('stateDate', '', ['class'=>'text-center radius', 'placeholder'=>'State the Date', 'id'=>'dp2', 'disabled']) }} </label>
+		{{ Form::checkbox('previouslyApp', 'Yes', null, ['id'=>'y_id','class' => 'text-center', 'onclick'=>'enableTbReason()']) }} Yes, <label class="mTop-07 text-center"> {{ Form::text('stateDate', '', ['class'=>'drp-element text-center radius', 'placeholder'=>'State the Date', 'id'=>'dp2', 'disabled']) }} </label>
 		{{ Form::checkbox('previouslyApp', 'No', null, ['id'=>'n_id', 'class' => 'text-center', 'onclick'=>'disableTbReason()']) }} <label class="mTop-07 text-center">No </label>
 	</div>
 </div>
@@ -46,7 +46,7 @@
 <div class="row">
 	<div class="large-4 columns">
 		<label>Notice Period Required</label>
-		{{ Form::text('nprequired', '', array('class'=>'text-center radius', 'placeholder'=>'Notice Period Required.')) }}
+		{{ Form::text('nprequired', '', array('id'=>'npDate', 'class'=>'text-center radius large-12', 'placeholder'=>'Notice Period Required.')) }}
 	</div>
 
 	<div class="large-4 columns">

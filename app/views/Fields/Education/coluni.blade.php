@@ -28,13 +28,13 @@
 
 	<div class="large-4 columns">
 		<label>Date Attended</label>
-		{{ Form::text('collegedateattended', '', ['class'=>'error text-center radius', 'placeholder'=>'Date you Attend', 'id'=>'dp5']) }}
+		{{ Form::text('collegedateattended', '', ['class'=>'drp-element error text-center radius', 'placeholder'=>'Date you Attend', 'id'=>'dp5']) }}
 		@if ($errors->has('collegedateattended')) <small class="error">{{ $errors->first('collegedateattended') }}</small> @endif
 	</div>
 	
 	<div class="large-4 columns">
 		<label>Mo. & Yr. Of Graduation</label>
-		{{ Form::text('collegegraduate', '', ['class'=>'error text-center radius', 'placeholder'=>'Date you Graduated', 'id'=>'dp6']) }}
+		{{ Form::text('collegegraduate', '', ['class'=>'drp-element error text-center radius', 'placeholder'=>'Date you Graduated', 'id'=>'dp6']) }}
 		@if ($errors->has('collegegraduate')) <small class="error">{{ $errors->first('collegegraduate') }}</small> @endif
 	</div>
 </div>

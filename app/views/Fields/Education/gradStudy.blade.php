@@ -23,10 +23,10 @@
 	</div>
 	<div class="large-4 columns">
 		<label>Date Attended</label>
-		{{ Form::text('graddateattended', '', ['class'=>'text-center radius', 'placeholder'=>'Date you Attend', 'id'=>'dp3']) }}
+		{{ Form::text('graddateattended', '', ['class'=>'drp-element text-center radius', 'placeholder'=>'Date you Attend', 'id'=>'dp3']) }}
 	</div>
 	<div class="large-4 columns">
 		<label>Mo. & Yr. Of Graduation</label>
-		{{ Form::text('gradgraduate_1', '', ['class'=>'text-center radius', 'placeholder'=>'Date you Graduated', 'id'=>'dp4']) }}
+		{{ Form::text('gradgraduate_1', '', ['class'=>'drp-element text-center radius', 'placeholder'=>'Date you Graduated', 'id'=>'dp4']) }}
 	</div>
 </div>

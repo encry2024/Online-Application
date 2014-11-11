@@ -87,6 +87,33 @@
 	margin: 0 0 0.7rem 0 !important;
 }
 
+.date-Icon {
+	background: #FFFFFF url(calendar-icon.png) no-repeat right 4px center;
+}
+
+.drp-element {
+    display: block;
+    padding: 6px 30px 6px 6px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 3px;
+    color: #444444;
+    width: 250px;
+    height: 31px;
+    font-size: 0.9em;
+    border: 1px solid #FFFFFF;
+    background: #FFFFFF url(calendar-icon.png) no-repeat right 4px center;
+    background-size: 24px 24px;
+    cursor: pointer;
+
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow:    inset 0px 1px 3px 0px rgba(0, 0, 0, 0.65);
+    box-shadow:         inset 0px 1px 3px 0px rgba(0, 0, 0, 0.65);
+}
 
 /*PANEL STYLES*/
 .topBar-style {
