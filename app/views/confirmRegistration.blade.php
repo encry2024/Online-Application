@@ -8,46 +8,41 @@
 		</div>
 	</div>
 </div>
+
 <div class="large-12 columns backcolor">
-	{{ Form::label('', 'Application Form', array('class'=>'label-style-header font-style-segoe right')) }}
+	{{ Form::label('', 'Confirm your Information', array('class'=>'label-style-header font-style-segoe right')) }}
 </div>
 @endsection
 
-@section('setScript')
-	onLoad="defaultValues()"
-@endsection
-
 @section('body')
-	{{ Form::open(array('url'=>'register')) }}
-
+	{{ Form::open(array('url'=>'Applicant/'.$applicant_info->id.'/Update')) }}
 	<!-- ERROR CONTAINER START -->
-	@include('Container.errorContainer')
-	<!-- ERROR CONTAINER END -->
+	@include('Container.Container-Confirm-Page.errorContainer')
+	<!-- ERROR CONTAINER.Container-Confirm-Page END -->
+	
+	<!-- BASIC CONTAINER.Container-Confirm-Page START -->
+	@include('Container.Container-Confirm-Page.BasicDetails')
+	<!-- BASIC CONTAINER.Container-Confirm-Page END -->
 
-	<!-- BASIC CONTAINER START -->
-	@include('Container.BasicDetails')
-	<!-- BASIC CONTAINER END -->
+	<!-- PERSONAL CONTAINER.Container-Confirm-Page START -->
+	@include('Container.Container-Confirm-Page.PersonalInformation')
+	<!-- PERSONAL CONTAINER.Container-Confirm-Page END -->
 
-	<!-- PERSONAL CONTAINER START -->
-	@include('Container.PersonalInformation')
-	<!-- PERSONAL CONTAINER END -->
+	<!-- EDUCATION CONTAINER.Container-Confirm-Page START -->
+	@include('Container.Container-Confirm-Page.Education')
+	<!-- EDUCATION CONTAINER.Container-Confirm-Page END -->
 
-	<!-- EDUCATION CONTAINER START -->
-	@include('Container.Education')
-	<!-- EDUCATION CONTAINER END -->
+	<!-- FAMILY CONTAINER.Container-Confirm-Page START -->
+	@include('Container.Container-Confirm-Page.Family')
+	<!-- FAMILY CONTAINER.Container-Confirm-Page END -->
 
-	<!-- FAMILY CONTAINER START -->
-	@include('Container.Family')
-	<!-- FAMILY CONTAINER END -->
+	<!-- EMPLOYMENT CONTAINER.Container-Confirm-Page START -->
+	@include('Container.Container-Confirm-Page.EmploymentHistory')
+	<!-- EMPLOYMENT CONTAINER.Container-Confirm-Page END -->
 
-	<!-- EMPLOYMENT CONTAINER START -->
-	@include('Container.EmploymentHistory')
-	<!-- EMPLOYMENT CONTAINER END -->
-
-	<!-- INTERVIEW CONTAINER START -->
-	@include('Container.Interview')
+	<!-- INTERVIEW CONTAINER.Container-Confirm-Page START -->
+	@include('Container.Container-Confirm-Page.Interview')
 	<!-- INTERVIEW CONTAINER END -->
-
 	
 	<div class="large-12 columns">
 		<div class="row">

@@ -21,31 +21,31 @@
 	{{ Form::open(array('url'=>'register')) }}
 
 	<!-- ERROR CONTAINER START -->
-	@include('Container.errorContainer')
+	@include('Container.Container-Registration-Page.errorContainer')
 	<!-- ERROR CONTAINER END -->
 
 	<!-- BASIC CONTAINER START -->
-	@include('Container.BasicDetails')
+	@include('Container.Container-Registration-Page.BasicDetails')
 	<!-- BASIC CONTAINER END -->
 
 	<!-- PERSONAL CONTAINER START -->
-	@include('Container.PersonalInformation')
+	@include('Container.Container-Registration-Page.PersonalInformation')
 	<!-- PERSONAL CONTAINER END -->
 
 	<!-- EDUCATION CONTAINER START -->
-	@include('Container.Education')
+	@include('Container.Container-Registration-Page.Education')
 	<!-- EDUCATION CONTAINER END -->
 
 	<!-- FAMILY CONTAINER START -->
-	@include('Container.Family')
+	@include('Container.Container-Registration-Page.Family')
 	<!-- FAMILY CONTAINER END -->
 
 	<!-- EMPLOYMENT CONTAINER START -->
-	@include('Container.EmploymentHistory')
+	@include('Container.Container-Registration-Page.EmploymentHistory')
 	<!-- EMPLOYMENT CONTAINER END -->
 
 	<!-- INTERVIEW CONTAINER START -->
-	@include('Container.Interview')
+	@include('Container.Container-Registration-Page.Interview')
 	<!-- INTERVIEW CONTAINER END -->
 
 	
