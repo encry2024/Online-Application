@@ -67,6 +67,9 @@
 	color: Black;
 }
 
+.label-white {
+	color: White;
+}
 
 
 
@@ -130,8 +133,9 @@
 
 .error-Panel {
 	background-color: #fff5f5;
-	border-color: #ffe7e7;
+	border-color: #d9534f;
 }
+
 
 
 
@@ -148,10 +152,6 @@
 	margin-left: 0.375rem;
 }
 
-
-
-
-
 /*BUTTON STYLES*/
 .button-bg-1 {
 	background-color: #f0443e;
@@ -166,8 +166,25 @@
 
 
 /*FONT STYLES - font family, color, size*/
+
+.size-22 {
+	font-size: 22;
+}
+
+.size-28 {
+	font-size: 28;
+}
+
+.size-26 {
+	font-size: 26;
+}
+
 .font-style-segoe {
 	font-family: Segoe Ui;
+}
+
+.font-style-calibri {
+	font-family: calibri;
 }
 
 .text-area-row {
@@ -182,12 +199,21 @@
 	color: White;
 }
 
+.size-40 {
+	font-size: 40;
+}
+
+.size-38 {
+	font-size: 38;
+}
+
 .text-size-30 {
 	font-size: 30;
 }
 
+
 .text-size-28 {
-	font-size: 28;
+	font-size: 28 !important;
 }
 
 .text-size-26 {
@@ -228,6 +254,10 @@
 
 .text-center {
 	text-align: center;
+}
+
+.line-height-2 {
+	line-height: 2;
 }
 
 .text-lineHeight {

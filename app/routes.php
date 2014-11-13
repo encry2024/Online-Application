@@ -23,11 +23,28 @@ Route::get('/registration', function() {
 	return View::make('registration');
 });
 
-Route::get('confirmRegistration/{id?}', 'ApplicantController@getInfo');
+Route::get('login', function() {
+	return View::make('login');
+});
+
+Route::get('ErrorPage', function() {
+	return View::make('ErrorPage');
+});
+
+Route::get('register', function() {
+	return View::make('registerUser');
+});
+
+Route::get('Mainpage', function() {
+	$applicants = Applicant::all();
+	return View::make('mainPage')->with('applicants', $applicants);
+});
+
+Route::get('confirmRegistration/{id}', 'ApplicantController@getInfo');
 
 
 
-
+#################################################################################
 
 
 
@@ -36,6 +53,8 @@ Route::post('authenticate', function() {
 	$login = User::validateLogin(Input::all());
 	return $login;
 });
+
+Route::post('registeruser', 'UserController@registerUser');
 
 Route::post('register', 'ApplicantController@registerApplicant');
 

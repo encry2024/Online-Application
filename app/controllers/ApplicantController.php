@@ -8,8 +8,18 @@ class ApplicantController extends BaseController {
 	}
 
 	public function getInfo($id) {
-		$get_info = Applicant::where('applicant_id', $id)->first();
-		return View::make('confirmRegistration')->with('applicant_info', $get_info);
+		#Decrypt applicant's ID
+		$get_info = Applicant::find(Crypt::decrypt($id));
+		#Get the column Visited
+		$visited = $get_info->Visited;
+
+		#Check the Visited value..
+		#If 0. Redirect the applicant to confirmRegistration to confirm his/her information.
+		if($visited == 0)
+		{ return View::make('confirmRegistration')->with('applicant_info', $get_info); }
+		#Else. Display error
+		else
+		{return View::make('ErrorPage'); }
 	}
 
 	public function updateApplicant($id) {

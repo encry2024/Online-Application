@@ -19,7 +19,7 @@
 
 @section('body')
 	{{ Form::open(array('url'=>'register')) }}
-
+	
 	<!-- ERROR CONTAINER START -->
 	@include('Container.Container-Registration-Page.errorContainer')
 	<!-- ERROR CONTAINER END -->
@@ -43,11 +43,6 @@
 	<!-- EMPLOYMENT CONTAINER START -->
 	@include('Container.Container-Registration-Page.EmploymentHistory')
 	<!-- EMPLOYMENT CONTAINER END -->
-
-	<!-- INTERVIEW CONTAINER START -->
-	@include('Container.Container-Registration-Page.Interview')
-	<!-- INTERVIEW CONTAINER END -->
-
 	
 	<div class="large-12 columns">
 		<div class="row">
@@ -123,21 +118,12 @@
 				} else {
 					return true;
 				}
-
 			} else {
 				alert("Invalid date format. Please Input in (mm/dd/yyyy) format.");
 				document.getElementById("age").value = "";
 				return false;
 			}
 		}
-		
-		$(document).ready(function() {
-			$('#npDate').DateRangePicker({
-				startDate: '2014-11-11',
-				endDate: '2015-12-31'
-			});
-		});
-
 
 		function enableTbReason() {
 			if(document.getElementById('y_id').checked) {

@@ -60,11 +60,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 			$audits->history = " A new account was created. Username: " . $users_username .".";
 			$audits->save();
 
-			return Redirect::to('/');
+			return Redirect::to('login');
 			}
 		}
-
-
 
 	public static function validateLogin($data) {
 		$rules = array(
@@ -76,17 +74,16 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 		if($validation->fails()) {
 			$failed = $validation->failed();
-			return  Redirect::to('/')->with('error_index', $failed)->withErrors($validation)->withInput();
+			return  Redirect::to('login')->with('error_index', $failed)->withErrors($validation)->withInput();
 		} else {
 			$credentials = array(
 			  'username' => Input::get('username'),
 			  'password' => Input::get('password')
 			);
-
 			if (Auth::attempt($credentials)) {
-					return Redirect::to('registration');
+					return Redirect::to('Mainpage');
 			} else {
-				return Redirect::to('/')
+				return Redirect::to('login')
 		            ->with('flash_error', 'Your username/password was incorrect.')
 		            ->withInput();
 			}

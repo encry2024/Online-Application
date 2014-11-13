@@ -46,7 +46,7 @@
 <div class="row">
 	<div class="large-4 columns">
 		<label>Notice Period Required</label>
-		{{ Form::text('nprequired', '', array('id'=>'npDate', 'class'=>'text-center radius large-12', 'placeholder'=>'Notice Period Required.')) }}
+		{{ Form::text('nprequired', '', array('class'=>'text-center radius large-12', 'placeholder'=>'Notice Period Required.')) }}
 	</div>
 
 	<div class="large-4 columns">

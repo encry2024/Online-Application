@@ -1,7 +1,7 @@
 
 
 
-	
+<br>
 @if ($errors->has())
 <div class="row">
 	<div class="large-12 columns">
@@ -12,7 +12,6 @@
 				<li>{{ Form::label('', $error, ['class'=>'error-Message']) }}</li>
 			@endforeach
 			</ul>
-			
 		</div>
 	</div>
 </div>

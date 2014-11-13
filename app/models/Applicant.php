@@ -151,7 +151,7 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 			else 
 				{ $applicant->stateDate = $data['stateDate']; }
 
-			$applicant->nprequired = date('m/d/Y', strtotime($_POST["from-date"])) . " to " . date('m/d/Y', strtotime($_POST["to-date"]));
+			$applicant->nprequired = $data['nprequired'];
 			$applicant->source = $data['source'];
 			$applicant->referred = $data['referred'];
 
@@ -307,9 +307,8 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 			$audits = New Audit;
 			$audits->history = "Applicant " . $getApplicant_LastName . " " . $getApplicant_MiddleName . " " . $getApplicant_FirstName . " has been registered successfully. (Applicant ID: " . $getApplicant_ApplicantId . ") ";
 			$audits->save();
-
-			return Redirect::action('ApplicantController@getInfo', array('id' => $getApplicant_ApplicantId));
-			//return View::make('/confirmRegistration')->with('applicant_info', $applicantInfo);
+			#Encrypt applicant's ID for security.
+			return Redirect::to('confirmRegistration/' . Crypt::encrypt($applicantInfo->id));
 		}
 	}
 
@@ -317,11 +316,11 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		$applicant_information = Applicant::find($id);
 		
 		#Applicant Informations:
-		$applicant_information->positiondesired_1 = $data['positiondesired_1'];
-		$applicant_information->expectedsalary = $data['expectedsalary'];
-		$applicant_information->cemployed_1 = $data['cemployed'];
-		$applicant_information->positiondesired_2 = $data['positiondesired_2'];
-		$applicant_information->previouslyApp_1 = $data['previouslyApp'];
+		$applicant_information->positiondesired_1 	= $data['positiondesired_1'];
+		$applicant_information->expectedsalary 		= $data['expectedsalary'];
+		$applicant_information->cemployed_1 		= $data['cemployed'];
+		$applicant_information->positiondesired_2 	= $data['positiondesired_2'];
+		$applicant_information->previouslyApp_1 	= $data['previouslyApp'];
 
 		if ( Input::get('stateDate') == "" ) 
 			{ $applicant_information->stateDate = ""; } 
@@ -333,7 +332,6 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		$applicant_information->referred = $data['referred'];
 
 		// PERSONAL INFORMATION SECTION
-
 		$applicant_information->lastname 		= $data['lastname'];
 		$applicant_information->firstname 		= $data['firstname'];
 		$applicant_information->middle 			= $data['middle'];
@@ -351,8 +349,7 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		$applicant_information->sss 			= $data['sss'];
 		$applicant_information->tin 			= $data['tin'];
 
-		// EDUCATION INFORMATION SECTION
-
+		#EDUCATION INFORMATION SECTION
 		$applicant_information->hsname 			= $data['hsname'];
 		$applicant_information->hseductitle 	= $data['hseductitle'];
 		$applicant_information->hsschooladdress = $data['hsschooladdress'];
@@ -369,8 +366,7 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		$applicant_information->graddateattended 		= $data['graddateattended'];
 		$applicant_information->gradgraduate_1			= $data['gradgraduate_1'];
 
-		// FAMILY INFORMATION SECTION
-
+		#FAMILY INFORMATION SECTION
 		$applicant_information->famname1 = $data['famname1'];
 		$applicant_information->famname2 = $data['famname2'];
 		$applicant_information->famname3 = $data['famname3'];
@@ -413,8 +409,7 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		else 
 			{ $applicant_information->rsn_2 = $data['rsn_2']; }
 
-		// CHARACTER REFERENCE SECTION
-
+		#CHARACTER REFERENCE SECTION
 		$applicant_information->nme1 = $data['nme1'];
 		$applicant_information->nme2 = $data['nme2'];
 		$applicant_information->nme3 = $data['nme3'];
@@ -426,8 +421,7 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		$applicant_information->addcon3 = $data['addcon3'];
 		$applicant_information->state_1 = $data['state_1'];
 		
-		// EMPLOYMENT INFORMATION SECTION
-
+		#EMPLOYMENT INFORMATION SECTION
 		if ( Input::get('reason_2') == "" ) 
 			{ $applicant_information->rsn_2 = ""; } 
 		else 
@@ -455,7 +449,10 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		$applicant_information->phonenumber_2 			= $data['phonenumber_2'];
 		$applicant_information->pempemployeraddress_2 	= $data['pempemployeraddress_2'];
 		$applicant_information->pempcashcompensation_2 	= $data['pempcashcompensation_2'];
-
+		$applicant_information->visited					= '1';
+		
 		$applicant_information->save();
+
+		return Redirect::to('/');
 	}
 }

@@ -39,15 +39,11 @@
 	<!-- EMPLOYMENT CONTAINER.Container-Confirm-Page START -->
 	@include('Container.Container-Confirm-Page.EmploymentHistory')
 	<!-- EMPLOYMENT CONTAINER.Container-Confirm-Page END -->
-
-	<!-- INTERVIEW CONTAINER.Container-Confirm-Page START -->
-	@include('Container.Container-Confirm-Page.Interview')
-	<!-- INTERVIEW CONTAINER END -->
 	
 	<div class="large-12 columns">
 		<div class="row">
 		<br><br><br>
-			{{ Form::submit('Register', ['class'=>'large-2 success button radius right', 'id'=>'register']) }}
+			{{ Form::submit('Register', ['class'=>'large-12 success button radius right', 'id'=>'register']) }}
 		</div>
 	</div>
 
