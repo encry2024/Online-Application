@@ -5,7 +5,7 @@
 ?>
 
 
-<div class="large-11 small-12 columns">
+<div class="large-11 small-12 columns push-1">
 	<div class="row">
 		<div class="large-11 small-12 right	">
 			<table class="large-12" id="stream_table">
@@ -21,10 +21,10 @@
 				<tbody>
 				@foreach($applicants as $applicant)
 					<tr>
-						<td>{{ ++$ctr }}</td>
-						<td>{{ link_to('', $applicant->firstname . ' ' . $applicant->middle . ' ' . $applicant->lastname, ['class'=>'', 'id'=>'', 'name'=>''] ) }}</td>
+						<td>{{Form::label('', ++$ctr, ['class'=>'size-14', 'id'=>'', 'name'=>'']) }}</td>
+						<td>{{ link_to('', $applicant->firstname . ' ' . $applicant->middle . ' ' . $applicant->lastname, ['class'=>'size-14', 'id'=>'', 'name'=>''] ) }}</td>
 						<td></td>
-						<td>{{ $applicant->dateofapplication }}</td>
+						<td>{{ Form::label('', $applicant->dateofapplication, ['class'=>'size-14', 'id'=>'', 'name'=>'']) }}</td>
 					</tr>
 				@endforeach
 				</tbody>

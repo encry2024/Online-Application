@@ -136,7 +136,15 @@
 	border-color: #d9534f;
 }
 
+.info-panel-1 {
+	border-style: none;
+	border-right-style: inset;
+}
 
+.info-panel-2 {
+	border-style: none;
+	border-right-style: none;
+}
 
 
 /*LINK STYLES*/
@@ -166,6 +174,10 @@
 
 
 /*FONT STYLES - font family, color, size*/
+
+.size-30 {
+	font-size: 30;
+}
 
 .size-22 {
 	font-size: 22;

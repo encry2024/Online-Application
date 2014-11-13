@@ -42,8 +42,7 @@
 		{{ HTML::script('tiny-datepicker/js/jquery.datepicker.js') }}
 		{{ HTML::script('tiny-datepicker/js/jquery.datepicker.min.js') }}
 		{{ HTML::script('packages/dist/js/bootstrap.js') }}
-		{{ HTML::script('packages/jqueries/jquery-1.11.1.min.js') }}
-		{{ HTML::script('packages/jqueries/jquery.dataTables.min.js') }}
+		{{ HTML::script('packages/jTables/jquery.dataTables.min.js') }}
 		@yield('body')
 		@yield('scripts')
 

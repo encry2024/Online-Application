@@ -14,4 +14,5 @@
 <!-- CONTAINER MAINPAGE START -->
 @include('Container.Container-Mainpage.MainPage')
 <!-- CONTAINER MAINPAGE END -->
+
 @endsection
