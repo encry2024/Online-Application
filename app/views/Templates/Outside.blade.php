@@ -8,6 +8,7 @@
 		{{ HTML::style('packages/foundation-icons/foundation-icons.css') }}
 		{{ HTML::style('packages/foundation-icons/preview.html') }}
 		{{ HTML::style('packages/custom-style/custom-style.css') }}
+		{{ HTML::style('packages/foundation-icons/foundation-icons.ttf') }}
 		{{ HTML::style('packages/foundation_icons_general/foundation_icons_general/stylesheets/general_foundicons.css') }}
 		{{ HTML::style('packages/foundation-5.4.7/datepicker/example.css') }}
 		{{ HTML::style('packages/foundation-5.4.7/datepicker/example.html') }}
@@ -43,12 +44,15 @@
 		{{ HTML::script('tiny-datepicker/js/jquery.datepicker.min.js') }}
 		{{ HTML::script('packages/dist/js/bootstrap.js') }}
 		{{ HTML::script('packages/jTables/jquery.dataTables.min.js') }}
-		@yield('body')
-		@yield('scripts')
+		{{ HTML::script('packages/foundation-5.4.7/js/foundation/foundation.js') }}
+		{{ HTML::script('packages/foundation-5.4.7/js/vendor/fastclick.js') }}
+		{{ HTML::script('packages/foundation-5.4.7/js/vendor/jquery.cookie.js') }}
+		{{ HTML::script('packages/foundation-5.4.7/js/foundation/foundation.tooltip.js') }}
 
 		<script>
 		  $(document).foundation();
-		</script>
-		
+		</script>	
+		@yield('body')
+		@yield('scripts')
 	</body>
 </html>

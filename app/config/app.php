@@ -94,7 +94,6 @@ return array(
 	*/
 
 	'providers' => array(
-		'Bllim\Datatables\DatatablesServiceProvider',
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
@@ -149,7 +148,6 @@ return array(
 	*/
 
 	'aliases' => array(
-		'Datatables'      => 'Bllim\Datatables\Datatables',
 		'App'             => 'Illuminate\Support\Facades\App',
 		'Artisan'         => 'Illuminate\Support\Facades\Artisan',
 		'Auth'            => 'Illuminate\Support\Facades\Auth',

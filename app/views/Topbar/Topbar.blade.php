@@ -16,8 +16,8 @@
 				<label class="label-white link-lineHeight small-pull-1">Welcome, {{ Auth::user()->firstname }}</label>
 				<ul class="dropdown">
 					<div class="separator"></div>
-					<li class="small-pull-1 ">{{ link_to('logout', 'Logout', ['class'=>'text-center']) }}</li>
-					<li class="small-pull-1 ">{{ link_to('changepass', 'Change Password', ['class'=>'text-center']) }}</li>
+					<li>{{ link_to('logout', 'Logout', ['class'=>'text-center']) }}</li>
+					<li>{{ link_to('changepass', 'Change Password', ['class'=>'text-center']) }}</li>
 				</ul>
 			</li>
 		</ul>

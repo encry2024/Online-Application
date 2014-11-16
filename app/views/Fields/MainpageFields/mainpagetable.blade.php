@@ -4,7 +4,7 @@
 
 ?>
 
-
+<br>
 <div class="large-11 small-12 columns push-1">
 	<div class="row">
 		<div class="large-11 small-12 right	">
@@ -22,7 +22,7 @@
 				@foreach($applicants as $applicant)
 					<tr>
 						<td>{{Form::label('', ++$ctr, ['class'=>'size-14', 'id'=>'', 'name'=>'']) }}</td>
-						<td>{{ link_to('', $applicant->firstname . ' ' . $applicant->middle . ' ' . $applicant->lastname, ['class'=>'size-14', 'id'=>'', 'name'=>''] ) }}</td>
+						<td>{{ link_to('Applicant/'.$applicant->applicant_id.'/Profile', $applicant->firstname . ' ' . $applicant->middle . ' ' . $applicant->lastname, ['class'=>'size-14', 'id'=>'', 'name'=>''] ) }}</td>
 						<td></td>
 						<td>{{ Form::label('', $applicant->dateofapplication, ['class'=>'size-14', 'id'=>'', 'name'=>'']) }}</td>
 					</tr>

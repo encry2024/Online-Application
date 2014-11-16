@@ -40,7 +40,12 @@ Route::get('Mainpage', function() {
 	return View::make('mainPage')->with('applicants', $applicants);
 });
 
-Route::get('confirmRegistration/{id}', 'ApplicantController@getInfo');
+Route::group(array('before' => 'auth'), function() {
+    Route::get('Applicant/{applicant_id}/Profile', 'UserController@getApplicantInfo');
+});
+
+Route::get('confirmRegistration/{id}', 'UserController@getInfo');
+
 
 
 
