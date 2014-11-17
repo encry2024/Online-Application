@@ -36,20 +36,27 @@ Route::get('register', function() {
 });
 
 Route::get('Mainpage', function() {
-	$applicants = Applicant::all();
-	return View::make('mainPage')->with('applicants', $applicants);
+	$applicant = Applicant::paginate(50);
+
+	if (Request::ajax()) 
+	{ return Response::json(View::make('applicants', array('applicants' => $applicant))->render()); }
+
+	return View::make('Mainpage', array('applicants' => $applicant));
 });
+
 
 Route::group(array('before' => 'auth'), function() {
     Route::get('Applicant/{applicant_id}/Profile', 'UserController@getApplicantInfo');
 });
 
-Route::get('confirmRegistration/{id}', 'UserController@getInfo');
+
+Route::get('confirmRegistration/{id}', 'ApplicantController@getInfo');
 
 
 
 
 #################################################################################
+
 
 
 

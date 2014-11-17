@@ -1,10 +1,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
+		<meta charset="utf-8">
+	
 		{{ HTML::script('packages/foundation-5.4.7/js/vendor/modernizr.js') }}
 		{{ HTML::style('packages/foundation-5.4.7/css/foundation.css') }}
 		{{ HTML::style('packages/foundation-5.4.7/css/foundation.min.css') }}
-		{{ HTML::style('packages/foundation-5.4.7/css/normalize.css') }}
 		{{ HTML::style('packages/foundation-icons/foundation-icons.css') }}
 		{{ HTML::style('packages/foundation-icons/preview.html') }}
 		{{ HTML::style('packages/custom-style/custom-style.css') }}
@@ -16,7 +17,8 @@
 		{{ HTML::style('range-datepicker/css/dateRangePicker.css') }}
 		{{ HTML::style('tiny-datepicker/css/jquery.datepicker.css') }}
 		{{ HTML::style('assets/css/main.css') }}
-
+		{{ HTML::style('packages/DataTables-1.10.4/media/css/jquery.dataTables.css') }}
+		
 		@yield('head')
 
 	</head>
@@ -27,7 +29,8 @@
 
 	<body @yield('setScript')>
 		{{ HTML::script('packages/foundation-5.4.7/js/vendor/jquery.js') }}
-		
+		{{ HTML::script('packages/DataTables-1.10.4/media/js/jquery.js') }}
+		{{ HTML::script('ajax/libs/jquery/1.10.1/jquery.min.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/js/vendor/fastclick.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/js/foundation.min.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/js/foundation/foundation.topbar.js') }}
@@ -48,6 +51,7 @@
 		{{ HTML::script('packages/foundation-5.4.7/js/vendor/fastclick.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/js/vendor/jquery.cookie.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/js/foundation/foundation.tooltip.js') }}
+
 
 		<script>
 		  $(document).foundation();

@@ -15,6 +15,7 @@ class UserController extends BaseController {
 		} else {
 			return View::make('Fields.MainpageFields.Mainpage-Error.webPageError');
 		}
-		
 	}
 }
+
+
