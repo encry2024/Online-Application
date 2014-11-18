@@ -233,9 +233,9 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 
 			$applicant->chkbx_2 = $data['chkbx_2'];
 			if ( Input::get('rsn_2') == "" ) 
-				{ $applicant->rsn_2 = ""; } 
+				{ $applicant->reason_2 = ""; } 
 			else 
-				{ $applicant->rsn_2 = $data['rsn_2']; }
+				{ $applicant->reason_2 = $data['rsn_2']; }
 
 			// CHARACTER REFERENCE SECTION
 

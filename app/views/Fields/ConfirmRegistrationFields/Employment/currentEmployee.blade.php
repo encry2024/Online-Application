@@ -8,7 +8,7 @@
 		<label>Have you been dismissed by any of your former employers for any administrative or just cause? If: </label>
 		{{ Form::radio('state_1', 'Yes', $applicant_info->state_1=='Yes'?'checked':'', ['id'=>'y_state','class' => 'text-center', 'onclick'=>'enableTbReason_2()']) }} <label class="mTop-07">Yes</label>
 		{{ Form::radio('state_1', 'No', $applicant_info->state_1=='No'?'checked':'', ['id'=>'n_state', 'class' => 'text-center', 'onclick'=>'disableTbReason_2()']) }} <label class="mTop-07">No </label>
-		{{ Form::text('reason_2', $applicant_info->rsn_2, ['id'=>'reason_2', 'class'=>'error radius', 'placeholder'=>'State your details here', 'disabled']) }}
+		{{ Form::text('reason_2', $applicant_info->rsn_2, ['id'=>'reason_2', 'class'=>'error radius', 'placeholder'=>'State your details here', 'readOnly']) }}
 		@if ($errors->has('state_1')) <small class="error">{{ $errors->first('state_1') }}</small> @endif
 	</div>
 </div>
