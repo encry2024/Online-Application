@@ -1,12 +1,9 @@
 @extends('Templates.Outside')
 
-@section('head')
-@include('Topbar.Topbar')
-@endsection
-
-
 @section('body')
 {{ Form::open(array('url'=>$applicant_info->id.'/Update')) }}
+@include('Topbar.applicantProfileTopBar')
+
 <!-- APPLICANT INFORMATION START -->
 @include('Container.Container-Mainpage.Container-Applicant-Information.applicantInformation')
 <!-- APPLICANT INFORMATION END -->
@@ -102,48 +99,48 @@
 
 		function enableTbReason_2() {
 			if(document.getElementById('y_state').checked) {
-				document.getElementById('reason_2').disabled = false;
+				document.getElementById('reason_2').readOnly = false;
 			} else {
-				document.getElementById('reason_2').disabled = true;
+				document.getElementById('reason_2').readOnly = true;
 				document.getElementById('reason_2').value = null;
 			}
 		}
 
 		function disableTbReason_2() {
 			if(document.getElementById('n_state').checked) {
-				document.getElementById('reason_2').disabled = true;
+				document.getElementById('reason_2').readOnly = true;
 				document.getElementById('reason_2').value = null;
 			} 
 		}
 
 		function enableTbRsn() {
 			if(document.getElementById('chkbx_y_state').checked) {
-				document.getElementById('rsn').disabled = false;
+				document.getElementById('rsn').readOnly = false;
 			} else {
-				document.getElementById('rsn').disabled = true;
+				document.getElementById('rsn').readOnly = true;
 				document.getElementById('rsn').value = null;
 			}
 		}
 
 		function disableTbRsn() {
 			if(document.getElementById('chkbx_n_state').checked) {
-				document.getElementById('rsn').disabled = true;
+				document.getElementById('rsn').readOnly = true;
 				document.getElementById('rsn').value = null;
 			} 
 		}
 
 		function enableTbRsn_2() {
 			if(document.getElementById('chkbx_2_y_state').checked) {
-				document.getElementById('rsn_2').disabled = false;
+				document.getElementById('rsn_2').readOnly = false;
 			} else {
-				document.getElementById('rsn_2').disabled = true;
+				document.getElementById('rsn_2').readOnly = true;
 				document.getElementById('rsn_2').value = null;
 			}
 		}
 
 		function disableTbRsn_2() {
 			if(document.getElementById('chkbx_2_n_state').checked) {
-				document.getElementById('rsn_2').disabled = true;
+				document.getElementById('rsn_2').readOnly = true;
 				document.getElementById('rsn_2').value = null;
 			} 
 		}

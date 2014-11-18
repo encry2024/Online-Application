@@ -11,6 +11,7 @@
 			@include('Container.Container-Mainpage.Container-Applicant-Information.Education')
 			@include('Container.Container-Mainpage.Container-Applicant-Information.Family')
 			@include('Container.Container-Mainpage.Container-Applicant-Information.EmploymentHistory')
+			<br>
 		</div>
 	</div>
 </div>

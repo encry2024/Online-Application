@@ -17,8 +17,8 @@
 
 	<div class="large-3 columns">
 		<label>Currently Employed?</label>
-		{{ Form::checkbox('cemployed', 'yes', null, ['class' => 'text-center mrgin-07']) }} <label class="mTop-07"> Yes </label>
-		{{ Form::checkbox('cemployed', 'No', null, ['class' => 'text-center mrgin-07']) }} <label class="mTop-07"> No </label>
+		{{ Form::checkbox('cemployed', 'yes', $applicant_info->cemployed_1 == 'yes' ? 'checked' : '', ['class' => 'text-center mrgin-07']) }} <label class="mTop-07"> Yes </label>
+		{{ Form::checkbox('cemployed', 'No', $applicant_info->cemployed_1 == 'yes' ? 'checked' : '', ['class' => 'text-center mrgin-07']) }} <label class="mTop-07"> No </label>
 		@if ($errors->has('cemployed')) <small class="error">{{ $errors->first('cemployed') }}</small> @endif
 	</div>
 
@@ -38,8 +38,8 @@
 <div class="row">
 	<div class="large-5 columns">
 		<label>Previously Applied Here?</label>
-		{{ Form::checkbox('previouslyApp', 'Yes', null, ['id'=>'y_id','class' => 'text-center', 'onclick'=>'enableTbReason()']) }} Yes, <label class="mTop-07 text-center"> {{ Form::text('stateDate', '', ['class'=>'drp-element text-center radius', 'placeholder'=>'State the Date', 'id'=>'dp2', 'disabled']) }} </label>
-		{{ Form::checkbox('previouslyApp', 'No', null, ['id'=>'n_id', 'class' => 'text-center', 'onclick'=>'disableTbReason()']) }} <label class="mTop-07 text-center">No </label>
+		{{ Form::checkbox('previouslyApp', 'Yes', $applicant_info->previouslyApp_1=='Yes'?'checked':'', ['id'=>'y_id','class' => 'text-center', 'onclick'=>'enableTbReason()']) }} Yes, <label class="mTop-07 text-center"> {{ Form::text('stateDate', '', ['class'=>'drp-element text-center radius', 'placeholder'=>'State the Date', 'id'=>'dp2', 'disabled']) }} </label>
+		{{ Form::checkbox('previouslyApp', 'No', $applicant_info->previouslyApp_1 == 'No' ? 'checked' : '', ['id'=>'n_id', 'class' => 'text-center', 'onclick'=>'disableTbReason()']) }} <label class="mTop-07 text-center">No </label>
 	</div>
 </div>
 

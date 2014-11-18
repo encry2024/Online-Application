@@ -71,8 +71,8 @@
 <div class="row">
 	<div class="large-12 columns">
 		<label>Have you ever been involved in any administrative, civil or criminal case?</label>
-		{{ Form::checkbox('chkbx', 'Yes', null, ['id'=>'chkbx_y_state','class' => 'text-center', 'onclick'=>'enableTbRsn()']) }} <label class="mTop-07">Yes</label>
-		{{ Form::checkbox('chkbx', 'No', null, ['id'=>'chkbx_n_state', 'class' => 'text-center', 'onclick'=>'disableTbRsn()']) }} <label class="mTop-07">No </label>
+		{{ Form::radio('chkbx', 'Yes', $applicant_info->chkbx_1=='Yes'?'checked':'', ['id'=>'chkbx_y_state','class' => 'text-center', 'onclick'=>'enableTbRsn()']) }} <label class="mTop-07">Yes</label>
+		{{ Form::radio('chkbx', 'No', $applicant_info->chkbx_1=='No'?'checked':'', ['id'=>'chkbx_n_state', 'class' => 'text-center', 'onclick'=>'disableTbRsn()']) }} <label class="mTop-07">No </label>
 		{{ Form::text('rsn', $applicant_info->rsn, ['id'=>'rsn', 'class'=>'error radius', 'placeholder'=>'State your details here', 'disabled']) }}
 		@if ($errors->has('chkbx')) <small class="error">{{ $errors->first('chkbx') }}</small> @endif
 	</div>
@@ -81,9 +81,9 @@
 <div class="row">
 	<div class="large-12 columns">
 		<label>Have you had any physical pre mental condition which limits your ability to perform the job applied for or pose a potential risk to other employees?</label>
-		{{ Form::checkbox('chkbx_2', 'Yes', null, ['id'=>'chkbx_2_y_state','class' => 'text-center', 'onclick'=>'enableTbRsn_2()']) }} <label class="mTop-07">Yes</label>
-		{{ Form::checkbox('chkbx_2', 'No', null, ['id'=>'chkbx_2_n_state', 'class' => 'text-center', 'onclick'=>'disableTbRsn_2()']) }} <label class="mTop-07">No </label>
-		{{ Form::text('rsn_2', $applicant_info->rsn_2, ['id'=>'rsn_2', 'class'=>'error radius', 'placeholder'=>'State your details here', 'disabled']) }}
+		{{ Form::radio('chkbx_2', 'Yes', $applicant_info->chkbx_2 == 'Yes' ? 'checked' : '', ['id'=>'chkbx_2_y_state','class' => 'text-center', 'onclick'=>'enableTbRsn_2()']) }} <label class="mTop-07">Yes</label>
+		{{ Form::radio('chkbx_2', 'No', $applicant_info->chkbx_2 == 'No' ? 'checked' : '', ['id'=>'chkbx_2_n_state', 'class' => 'text-center', 'onclick'=>'disableTbRsn_2()']) }} <label class="mTop-07">No </label>
+		{{ Form::text('rsn_2', $applicant_info->reason_2, ['id'=>'rsn_2', 'class'=>'error radius', 'placeholder'=>'State your details here', 'disabled']) }}
 		@if ($errors->has('chkbx_2')) <small class="error">{{ $errors->first('chkbx_2') }}</small> @endif
 	</div>
 </div>
