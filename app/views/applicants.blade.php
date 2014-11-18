@@ -3,7 +3,7 @@
 	$ctr = 0;
 
 ?>
-{{ $applicants->links() }}
+<div class="push-11 large-3">{{ $applicants->links() }}</div>
 <br>
 <div class="large-12 columns large-centered">
 	<div class="row">
