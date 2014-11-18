@@ -33,8 +33,3 @@
 	</div>
 </div>
 
-<script>
-$(document).ready(function() {
-  $('#example1').dataTable();
-} );
-</script>
