@@ -43,15 +43,7 @@ Route::get('Mainpage', function() {
 });
 
 
-Route::group(array('before' => 'auth'), function() {
-    Route::get('Applicant/{applicant_id}/Profile', 'UserController@getApplicantInfo');
-    Route::post('{id}/Update', 'UserController@updateApplicantInfo');
 
-	Route::get('logout', function() {
-		Auth::logout();
-		return Redirect::to('login');
-	});
-});
 
 Route::get('confirmRegistration/{id}', 'ApplicantController@getInfo');
 
@@ -68,6 +60,16 @@ Route::post('authenticate', function() {
 	$login = User::validateLogin(Input::all());
 	return $login;
 });
+
+Route::group(array('before' => 'auth'), function() {
+	Route::get('Applicant/{applicant_id}/Profile', 'UserController@getApplicantInfo');
+	Route::post('{id}/Update', 'UserController@updateApplicantInfo');
+
+	Route::get('logout', function() {
+		Auth::logout();
+		return Redirect::to('login');
+	});
+});
 ########################
 
 
@@ -75,7 +77,6 @@ Route::post('authenticate', function() {
 
 #API
 Route::get('api/{key}/namesearch/{keyword}', function( $key, $namestring ) {
-
 	if ($key == "n6s2363107") {
 		if (strlen($namestring) >= 2) {
 			$searchName = Applicant::where('firstname', 'LIKE' , $namestring)
@@ -83,14 +84,13 @@ Route::get('api/{key}/namesearch/{keyword}', function( $key, $namestring ) {
 									->orWhere('middle', 'LIKE' , $namestring)->get()->toJson();
 			return $searchName;
 		} 
-			return View::make('Errors.errorCatcher');
+		return View::make('Errors.errorCatcher');
 	} else {
 		return View::make('Errors.errorCatcher');
 	}
 });
 
 Route::get('api/{key}/applicant/{keyword}', function( $key, $idString ) {
-
 	if ($key == "n6s2363107") {
 		$searchId = Applicant::where('applicant_id', $idString)->get()->toJson();
 		return $searchId;

@@ -11,10 +11,10 @@
 <div class="large-12 columns">
 	<div class="row">
 		<div class="large-12 columns large-centered">
-			@include('Fields.ConfirmRegistrationFields.Interview.hrInterview')
-			@include('Fields.ConfirmRegistrationFields.Interview.operationsInterview')
-			@include('Fields.ConfirmRegistrationFields.Interview.jo')
-			@include('Fields.ConfirmRegistrationFields.Interview.finalR')
+			@include('Fields.MainpageFields.ApplicantInformationFields.Interview.hrInterview')
+			@include('Fields.MainpageFields.ApplicantInformationFields.Interview.operationsInterview')
+			@include('Fields.MainpageFields.ApplicantInformationFields.Interview.jo')
+			@include('Fields.MainpageFields.ApplicantInformationFields.Interview.finalR')
 		</div>
 	</div>
 </div>

@@ -6,5 +6,5 @@
 
 
 
-@include('Fields.ConfirmRegistrationFields.Employment.currentEmployee')
-@include('Fields.ConfirmRegistrationFields.Employment.pemp')
+@include('Fields.MainpageFields.ApplicantInformationFields.Employment.currentEmployee')
+@include('Fields.MainpageFields.ApplicantInformationFields.Employment.pemp')

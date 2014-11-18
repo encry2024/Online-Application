@@ -9,5 +9,5 @@
 
 
 
-@include('Fields.ConfirmRegistrationFields.Family.familyInformation')
-@include('Fields.ConfirmRegistrationFields.Family.charRef')
+@include('Fields.MainpageFields.ApplicantInformationFields.Family.familyInformation')
+@include('Fields.MainpageFields.ApplicantInformationFields.Family.charRef')
