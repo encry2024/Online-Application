@@ -32,11 +32,7 @@ $columns = array(
 	array( 'db' => 'applicant_id', 'dt' => 0),
 	array( 
 			'db' => 'firstname',
-			'dt' => 1,
-			'formatter' => function( $d, $row) {
-				$array = array($d, 'db'=>'lastname');
-				return implode(" ", $array);
-			}
+			'dt' => 1
 		),
 	array( 'db' => 'lastname',  'dt' => 2 ),
 	array( 'db' => 'dateofapplication',   'dt' => 3 ),

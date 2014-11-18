@@ -7,7 +7,7 @@
 <br>
 <div class="large-12 columns large-centered">
 	<div class="row">
-		<table class="dtable" class="large-12">
+		<table id="example1" class="dtable" class="large-12">
 			<thead>
 				<tr class="text-center">
 					<th>#</th>
@@ -32,3 +32,9 @@
 		</table>
 	</div>
 </div>
+
+<script>
+$(document).ready(function() {
+  $('#example1').dataTable();
+} );
+</script>

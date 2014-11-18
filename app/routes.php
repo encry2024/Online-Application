@@ -36,7 +36,7 @@ Route::get('register', function() {
 });
 
 Route::get('Mainpage', function() {
-	$applicant = Applicant::paginate(50);
+	$applicant = Applicant::paginate(1);
 
 	if (Request::ajax()) 
 	{ return Response::json(View::make('applicants', array('applicants' => $applicant))->render()); }
@@ -47,6 +47,8 @@ Route::get('Mainpage', function() {
 
 Route::group(array('before' => 'auth'), function() {
     Route::get('Applicant/{applicant_id}/Profile', 'UserController@getApplicantInfo');
+
+    Route::post('{id}/Update', 'UserController@updateApplicantInfo');
 });
 
 

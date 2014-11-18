@@ -16,6 +16,12 @@ class UserController extends BaseController {
 			return View::make('Fields.MainpageFields.Mainpage-Error.webPageError');
 		}
 	}
+
+	public function updateApplicantInfo($id) {
+		$updateApplicantInformation = User::updateInfo($id, Input::all());
+
+		return $updateApplicantInformation;
+	}
 }
 
 
