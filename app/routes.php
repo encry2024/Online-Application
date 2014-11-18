@@ -49,8 +49,12 @@ Route::group(array('before' => 'auth'), function() {
     Route::get('Applicant/{applicant_id}/Profile', 'UserController@getApplicantInfo');
 
     Route::post('{id}/Update', 'UserController@updateApplicantInfo');
-});
 
+	Route::get('logout', function() {
+		Auth::logout();
+		return Redirect::to('login');
+	});
+});
 
 Route::get('confirmRegistration/{id}', 'ApplicantController@getInfo');
 
