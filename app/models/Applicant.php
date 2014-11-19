@@ -58,7 +58,7 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		 	'dateofbirth' => 'required|before:1/1/1997',
 		 	'placeofbirth' => 'required',
 		 	'sss' => 'required|alpha_dash',
-		 	'tin' => 'required|numeric',
+		 	'tin' => 'required|alpha_dash',
 		 	'hsname' => 'alpha_space_dash',
 		 	'hseductitle' => 'alpha_space_dash',
 		 	'hsdateattended' => 'date:m/d/Y',
@@ -149,8 +149,15 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 
 			if ( Input::get('stateDate') == "" ) 
 				{ $applicant->stateDate = ""; } 
-			else 
+			else
+			{
+				//Check first previouslyApp value. if value = no
+				//empty column stateDate.
+				if ($data['previouslyApp'] == 'No')
+				{ $applicant->stateDate = ""; }
+				else 
 				{ $applicant->stateDate = $data['stateDate']; }
+			}
 
 			$applicant->nprequired = $data['nprequired'];
 			$applicant->source = $data['source'];
@@ -325,8 +332,14 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 
 		if ( Input::get('stateDate') == "" ) 
 			{ $applicant_information->stateDate = ""; } 
-		else 
-			{ $applicant_information->stateDate = $data['stateDate']; }
+		else {
+			//Check first previouslyApp value. if value = no
+			//empty column stateDate.
+			if ($data['previouslyApp'] == 'No')
+			{ $applicant->stateDate = ""; }
+			else 
+			{ $applicant->stateDate = $data['stateDate']; }
+		}
 
 		$applicant_information->nprequired = $data['nprequired'];
 		$applicant_information->source = $data['source'];

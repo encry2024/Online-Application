@@ -95,12 +95,12 @@
 <div class="row">
 	<div class="large-6 columns">
 		<label>SSS No#</label>
-		{{ Form::text('sss', '', array('class'=>'error text-center radius', 'placeholder'=>'SSS #')) }}
+		{{ Form::text('sss', '', array('class'=>'error text-center radius', 'placeholder'=>'SSS #', 'id'=>'sss')) }}
 		@if ($errors->has('sss')) <small class="error">{{ $errors->first('sss') }}</small> @endif
 	</div>
 	<div class="large-6 columns">
 		<label>TIN #</label>
-		{{ Form::text('tin', '', array('class'=>'error text-center radius', 'placeholder'=>'TIN #')) }}
+		{{ Form::text('tin', '', array('class'=>'error text-center radius', 'placeholder'=>'TIN #', 'id'=>'tin')) }}
 		@if ($errors->has('tin')) <small class="error">{{ $errors->first('tin') }}</small> @endif
 	</div>
 </div>

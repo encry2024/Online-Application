@@ -51,8 +51,8 @@
 		{{ HTML::script('packages/foundation-5.4.7/js/vendor/fastclick.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/js/vendor/jquery.cookie.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/js/foundation/foundation.tooltip.js') }}
-
-
+		{{ HTML::script('Input-Mask/dist/jquery.SimpleMask.js') }}
+		
 		<script>
 		  $(document).foundation();
 		</script>	

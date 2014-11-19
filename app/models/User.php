@@ -84,10 +84,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 					return Redirect::to('Mainpage');
 			} else {
 				return Redirect::to('login')
-		            ->with('flash_error', 'Your username/password was incorrect.')
-		            ->withInput();
+				->with('flash_error', 'Your username/password was incorrect.')
+				->withInput();
 			}
-
 		}
 	}
 
@@ -103,8 +102,15 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 		if ( Input::get('stateDate') == "" ) 
 			{ $applicant_information->stateDate = ""; } 
-		else 
-			{ $applicant_information->stateDate = $data['stateDate']; }
+		else {
+			//Check first previouslyApp value. if value = no
+			//empty column stateDate.
+			if ($data['previouslyApp'] == 'No') {
+				
+			}
+			else 
+			{ $applicant->stateDate = $data['stateDate']; }
+		}
 
 		$applicant_information->nprequired = $data['nprequired'];
 		$applicant_information->source = $data['source'];
@@ -128,7 +134,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		$applicant_information->sss 			= $data['sss'];
 		$applicant_information->tin 			= $data['tin'];
 
-		#EDUCATION INFORMATION SECTION
+		// EDUCATION INFORMATION SECTION
 		$applicant_information->hsname 			= $data['hsname'];
 		$applicant_information->hseductitle 	= $data['hseductitle'];
 		$applicant_information->hsschooladdress = $data['hsschooladdress'];
@@ -199,7 +205,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		$applicant_information->addcon2 = $data['addcon2'];
 		$applicant_information->addcon3 = $data['addcon3'];
 		$applicant_information->state_1 = $data['state_1'];
-		
+
 		#EMPLOYMENT INFORMATION SECTION
 		if ( Input::get('reason_2') == "" ) 
 			{ $applicant_information->rsn_2 = ""; } 
@@ -212,7 +218,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		$applicant_information->bsalarymonth 		= $data['bsalarymonth'];
 		$applicant_information->employeraddress_1 	= $data['employeraddress_1'];
 		$applicant_information->cashcompensation_1 	= $data['cashcompensation_1'];
-		$applicant_information->pemployer_1 		= $data['pemployer_1'];
+		$applicant_information->pemployer_1			= $data['pemployer_1'];
 		$applicant_information->pempposition 		= $data['pempposition'];
 		$applicant_information->pempincdates 		= $data['pempincdates'];
 		$applicant_information->pempbsalarymonth 	= $data['pempbsalarymonth'];
@@ -229,7 +235,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		$applicant_information->pempemployeraddress_2 	= $data['pempemployeraddress_2'];
 		$applicant_information->pempcashcompensation_2 	= $data['pempcashcompensation_2'];
 		$applicant_information->visited					= '1';
-		
+
 		$applicant_information->save();
 
 		return Redirect::back();

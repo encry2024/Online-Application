@@ -18,37 +18,36 @@
 			var dte = new Date();
 			elem.value = dte.toLocaleDateString();
 		}
-
 		$('#dp1').fdatepicker({
-			format: 'mm/dd/yyyy',
+			format: 'MM, yyyy',
 		});
 
 		$('#dp2').fdatepicker({
-			format: 'mm/dd/yyyy',
+			format: 'MM, yyyy',
 		});
 
 		$('#dp3').fdatepicker({
-			format: 'mm/dd/yyyy',
+			format: 'MM, yyyy',
 		});
 
 		$('#dp4').fdatepicker({
-			format: 'mm/dd/yyyy',
+			format: 'MM, yyyy',
 		});
 
 		$('#dp5').fdatepicker({
-			format: 'mm/dd/yyyy',
+			format: 'MM, yyyy',
 		});
 
 		$('#dp6').fdatepicker({
-			format: 'mm/dd/yyyy',
+			format: 'MM, yyyy',
 		});
 
 		$('#dp7').fdatepicker({
-			format: 'mm/dd/yyyy',
+			format: 'MM, yyyy',
 		});
 
 		$('#dp8').fdatepicker({
-			format: 'mm/dd/yyyy',
+			format: 'MM, yyyy',
 		});
 
 		//Compute Age

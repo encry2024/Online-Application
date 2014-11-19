@@ -63,12 +63,21 @@
 			elem.value = dte.toLocaleDateString();
 		}
 
+		$('#sss').simpleMask({ 
+		  'mask': ['###-##-####'] 
+		});
+
+		$('#tin').simpleMask({ 
+		  'mask': ['##-#######'] 
+		});
+
 		$('#dp1').fdatepicker({
 			format: 'mm/dd/yyyy',
 		});
 
 		$('#dp2').fdatepicker({
-			format: 'mm/dd/yyyy',
+			format: 'MM, yyyy',
+			minViewMode: 'months'
 		});
 
 		$('#dp3').fdatepicker({
