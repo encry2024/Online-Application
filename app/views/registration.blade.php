@@ -77,31 +77,30 @@
 
 		$('#dp2').fdatepicker({
 			format: 'MM, yyyy',
-			minViewMode: 'months'
 		});
 
 		$('#dp3').fdatepicker({
-			format: 'mm/dd/yyyy',
+			format: 'MM, yyyy',
 		});
 
 		$('#dp4').fdatepicker({
-			format: 'mm/dd/yyyy',
+			format: 'MM, yyyy',
 		});
 
 		$('#dp5').fdatepicker({
-			format: 'mm/dd/yyyy',
+			format: 'MM, yyyy',
 		});
 
 		$('#dp6').fdatepicker({
-			format: 'mm/dd/yyyy',
+			format: 'MM, yyyy',
 		});
 
 		$('#dp7').fdatepicker({
-			format: 'mm/dd/yyyy',
+			format: 'MM, yyyy',
 		});
 
 		$('#dp8').fdatepicker({
-			format: 'mm/dd/yyyy',
+			format: 'MM, yyyy',
 		});
 
 		//Compute Age

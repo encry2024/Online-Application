@@ -19,7 +19,7 @@
 			elem.value = dte.toLocaleDateString();
 		}
 		$('#dp1').fdatepicker({
-			format: 'MM, yyyy',
+			format: 'mm/dd/yyyy',
 		});
 
 		$('#dp2').fdatepicker({
