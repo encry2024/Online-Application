@@ -1,7 +1,58 @@
+/*TEXTBOXES*/
+.l-6 {
+	width: 50% !important;
+}
+
+.custom-separator {
+	display: block;
+	/* border-top: 1px solid #CCC; */
+	/* border-bottom: 1px solid #FFF; */
+	height: 0;
+	margin: 5px 0;
+}
+
+.separator-width {
+	margin-left: -1.3rem !important;
+	margin-right: -1.3rem !important;
+}
+
 /*LABEL STYLES*/
+
+.welcome-label {
+	margin-left: 47rem;
+}
+
+.label-ln-ht-1 {
+	line-height: 0.4;
+}
+
+.icon-mrgn {
+	margin-left: 1rem;
+}
+
+.err-icn-lheight {
+	line-height: 0rem !important;
+}
+
+.rq-lbl {
+	background-color: #f4726d;
+	width: 11%;
+	margin-left: -1.3rem;
+	margin-top: -0.4rem;
+	border-bottom-right-radius: 3px;
+}
+
+.label-mrgn-top {
+	margin-top: -15px !important;
+}
+
 .label-style-header {
 	color: white;
 	font-size: 30;
+}
+
+.label-title {
+	line-height: 0;
 }
 
 .error-Message {
@@ -64,13 +115,16 @@
 }
 
 .label-black {
-	color: Black;
+	color: #333;
 }
 
 .label-white {
 	color: White;
 }
 
+.label-mg-left {
+	margin-left: 1rem;
+}
 
 
 /*INPUT STYLES*/
@@ -119,8 +173,41 @@
 }
 
 /*PANEL STYLES*/
+
+.panel-bg-white {
+	background-color: White !important;
+}
+
+.header-2 {
+	background-image: linear-gradient(to bottom,#f2dede 0,#ebcccc 100%);
+	border-top-left-radius: 0px !important;
+	border-top-right-radius: 0px !important;
+}
+
+.admin-topbar {
+	background-image: linear-gradient(to bottom,#f2dede 0,#ebcccc 100%);
+}
+
+.panel-footer {
+	margin-bottom: -1.3rem;
+	margin-left: -1.3rem;
+	margin-right: -1.3rem;
+}
+
+.panel-hdr-border {
+	border-color: #f2dede;
+}
+
+.header {
+	background-color: #333;
+}
+
 .topBar-style {
 	height: 55px;
+}
+
+.panel-body {
+	background-color: White;
 }
 
 .panel-style-login {
@@ -154,7 +241,10 @@
 
 }
 
-
+.homepage-link {
+	margin-top: -1.2rem !important;
+	font-size: 13px !important; 
+}
 
 .mleft-2 {
 	margin-left: 2rem !important;
@@ -167,18 +257,71 @@
 }
 
 /*BUTTON STYLES*/
+
+.button-tiny {
+padding-top: 0.4rem !important;
+padding-bottom: 0.3rem  !important;
+padding-left: 1.25rem !important;
+font-size: 16px !important;
+margin-top: -1rem !important;
+}
+
 .button-bg-1 {
 	background-color: #f0443e;
+}
+
+.button-bg:focus {
+	color: Black !important;
+}
+
+.button-bg-sb {
+	background-color: White !important;
+}
+
+.button-bg-sb:hover {
+	background-color: #333333 !important;
+	color: White!important;
 }
 
 
 
 
+/* MARGINS */
 
+.panel-border {
+	border-color: #333333;
+	border-width: 2px;
+}
 
+.custom-panel-1 {
+	height: 3px;
+}
 
+.panel-header {
+	margin-top: -1.4rem !important;
+	margin-left: -1.3rem;
+	margin-right: -1.3rem;
+	background-image:  linear-gradient(to bottom,#f2dede 0,#ebcccc 100%);
+	border-color: #f2dede;
+	margin-bottom: 1.8rem;
+	border-bottom-right-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+}
 
+.panel-header-admin {
+	margin-top: -1.4rem !important;
+	margin-left: -1.3rem;
+	margin-right: -1.3rem;
+	background-color:  White;
+	border-color: #ddd;
+	margin-bottom: 1.8rem;
+	border-bottom-right-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+}
 
+.cus-pan-hd-3 {
+	height: 3rem;
+}
 /*FONT STYLES - font family, color, size*/
 
 .size-30 {
@@ -186,7 +329,7 @@
 }
 
 .size-22 {
-	font-size: 22;
+	font-size: 22px !important;
 }
 
 .size-28 {
@@ -197,8 +340,36 @@
 	font-size: 26;
 }
 
+.size-24 {
+	font-size: 24px !important;
+}
+
+.size-18 {
+	font-size: 18px !important;
+}
+
+.size-17 {
+	font-size: 17px !important;
+}
+
+.size-16 {
+	font-size: 16px !important;
+}
+
+.size-14 {
+	font-size: 14px !important;
+}
+
+.size-13 {
+	font-size: 13px !important;
+}
+
+.size-12 {
+	font-size: 12px !important;
+}
+
 .font-style-segoe {
-	font-family: Segoe Ui;
+	font-family: Segoe Ui !important;
 }
 
 .font-style-calibri {
@@ -217,16 +388,20 @@
 	color: White;
 }
 
+.size-60 {
+	font-size: 60px !important;
+}
+
 .size-40 {
-	font-size: 40;
+	font-size: 40px !important;
 }
 
 .size-38 {
-	font-size: 38;
+	font-size: 38px !important;
 }
 
 .text-size-30 {
-	font-size: 30;
+	font-size: 30px !important;
 }
 
 
@@ -247,7 +422,7 @@
 }
 
 .text-size-20 {
-	font-size: 20 !important;
+	font-size: 20px !important;
 }
 
 .text-size-18 {
@@ -282,6 +457,29 @@
 	line-height: 2.5;
 }
 
+.text-height-3 {
+	height: 3rem !important;
+}
+
 .link-lineHeight {
 	line-height: 3;
+}
+
+
+input[type=text]:focus, textarea:focus {
+	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	border: 1px solid rgba(81, 203, 238, 1);
+}
+
+input[type=password]:focus, textarea:focus {
+	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	border: 1px solid rgba(81, 203, 238, 1);
+}
+
+
+/* TABLES */
+.table-format {
+    border-top-style: solid; 
+    border-top-width: 1px;
+    border-bottom-color: #ddd;
 }

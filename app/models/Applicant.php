@@ -60,17 +60,11 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		 	'sss' => 'required|alpha_dash',
 		 	'tin' => 'required|alpha_dash',
 		 	'hsname' => 'alpha_space_dash',
-		 	'hseductitle' => 'alpha_space_dash',
-		 	'hsdateattended' => 'date:m/d/Y',
-		 	'hsgraduate' => 'date:m/d/Y',
+
 			'collegename' => 'alpha_space_dash',
 			'collegeeductitle' => 'alpha_space_dash',
-			'collegedateattended' => 'date:m/d/Y',
-			'collegegraduate' => 'date:m/d/Y',
 			'gradschoolname' => 'alpha_space_dash',
 			'gradeductitle' => 'alpha_space_dash',
-			'graddateattended' => 'date:m/d/Y',
-			'gradgraduate_1' => 'date:m/d/Y',
 		 	'famname1' => 'required|alpha_space',
 		 	'famname2' => 'alpha_space',
 		 	'famname3' => 'alpha_space',
@@ -123,6 +117,7 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		
 
 		//CUSTOM ERROR MESSAGES START...
+		// 09262933589
 		include('Validations/custom_error_messages.php');
 		//CUSTOM ERROR MESSAGES END...
 
@@ -185,7 +180,7 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 			// EDUCATION INFORMATION SECTION
 
 			$applicant->hsname = $data['hsname'];
-			$applicant->hseductitle = $data['hseductitle'];
+			
 			$applicant->hsschooladdress = $data['hsschooladdress'];
 			$applicant->hsdateattended = $data['hsdateattended'];
 			$applicant->hsgraduate = $data['hsgraduate'];
@@ -316,7 +311,7 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 			$audits->history = "Applicant " . $getApplicant_LastName . " " . $getApplicant_MiddleName . " " . $getApplicant_FirstName . " has been registered successfully. (Applicant ID: " . $getApplicant_ApplicantId . ") ";
 			$audits->save();
 			#Encrypt applicant's ID for security.
-			return Redirect::to('confirmRegistration/' . Crypt::encrypt($applicantInfo->id));
+			return Redirect::to('confirmRegistration' . Crypt::encrypt($applicantInfo->id));
 		}
 	}
 
@@ -335,10 +330,10 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		else {
 			//Check first previouslyApp value. if value = no
 			//empty column stateDate.
-			if ($data['previouslyApp'] == 'No')
-			{ $applicant->stateDate = ""; }
+			if (Input::get('previouslyApp') == 'No')
+			{ $applicant_information->stateDate = ""; }
 			else 
-			{ $applicant->stateDate = $data['stateDate']; }
+			{ $applicant_information->stateDate = $data['stateDate']; }
 		}
 
 		$applicant_information->nprequired = $data['nprequired'];
@@ -365,7 +360,7 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 
 		#EDUCATION INFORMATION SECTION
 		$applicant_information->hsname 			= $data['hsname'];
-		$applicant_information->hseductitle 	= $data['hseductitle'];
+
 		$applicant_information->hsschooladdress = $data['hsschooladdress'];
 		$applicant_information->hsdateattended 	= $data['hsdateattended'];
 		$applicant_information->hsgraduate 		= $data['hsgraduate'];

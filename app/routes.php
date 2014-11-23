@@ -18,11 +18,11 @@ Route::get('/', function() {
 });
 
 Route::get('/registration', function() {
-	return View::make('registration');
+	return View::make('Container.RegistrationContainer');
 });
 
 Route::get('login', function() {
-	return View::make('login');
+	return View::make('Container.LoginContainer');
 });
 
 Route::get('ErrorPage', function() {
@@ -39,7 +39,7 @@ Route::get('Mainpage', function() {
 	if (Request::ajax()) 
 	{ return Response::json(View::make('applicants', array('applicants' => $applicant))->render()); }
 
-	return View::make('Mainpage', array('applicants' => $applicant));
+	return View::make('Container.AdminContainer', array('applicants' => $applicant));
 });
 
 

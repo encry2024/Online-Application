@@ -16,7 +16,7 @@ class ApplicantController extends BaseController {
 		#Check the Visited value..
 		#If 0. Redirect the applicant to confirmRegistration to confirm his/her information.
 		if($visited == 0)
-		{ return View::make('confirmRegistration')->with('applicant_info', $get_info); }
+		{ return View::make('Container.ConRegContainer')->with('applicant_info', $get_info); }
 		#Else. Display error
 		else
 		{return View::make('ErrorPage'); }

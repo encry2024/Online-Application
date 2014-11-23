@@ -106,10 +106,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 			//Check first previouslyApp value. if value = no
 			//empty column stateDate.
 			if ($data['previouslyApp'] == 'No') {
-				
+				$applicant_information->stateDate = "";
 			}
 			else 
-			{ $applicant->stateDate = $data['stateDate']; }
+			{ $applicant_information->stateDate = $data['stateDate']; }
 		}
 
 		$applicant_information->nprequired = $data['nprequired'];

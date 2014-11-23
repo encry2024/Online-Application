@@ -11,7 +11,7 @@ class UserController extends BaseController {
 		$applicants = Applicant::where('applicant_id', $applicant_id)->first();
 
 		if ($applicants == true) {
-			return View::make('ApplicantProfile')->with('applicant_info', $applicants);
+			return View::make('Container.ApplicantProfile')->with('applicant_info', $applicants);
 		} else {
 			return View::make('Fields.MainpageFields.Mainpage-Error.webPageError');
 		}
