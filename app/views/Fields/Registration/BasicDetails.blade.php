@@ -6,7 +6,7 @@
 <div class="large-10 columns large-centered">	
 	<div class="panel radius panel-body">
 		<div class="panel panel-header cus-pan-hd-3 radius">
-			<label class="size-22 label-black large-10 label-mg-left label-ln-ht-1">Basic Details</label>
+			<label class="size-22 label-white large-10 label-mg-left label-ln-ht-1">Basic Details</label>
 		</div>
 		<div class="panel-body">
 
@@ -44,10 +44,11 @@
 			</div>
 			<br>
 			<div class="row">
-				<div class="large-5 columns row collapse date" >
+				<div class="large-5 columns date" >
 					<label>Previously Applied Here?</label>
-					{{ Form::radio('previouslyApp', 'Yes', null, ['id'=>'y_id','class' => 'text-center', 'onclick'=>'enableTbReason()']) }} Yes, <label class="mTop-07 text-center"> {{ Form::text('stateDate', '', ['class'=>' text-center radius', 'placeholder'=>'State the Date', 'id'=>'dp2', 'data-date-minviewmode'=>'months', 'readOnly']) }} </label>
+					{{ Form::radio('previouslyApp', 'Yes', null, ['id'=>'y_id','class' => 'text-center', 'onclick'=>'enableTbReason()']) }} <label class="mTop-07 text-center"> Yes, </label>
 					{{ Form::radio('previouslyApp', 'No', null, ['id'=>'n_id', 'class' => 'text-center', 'onclick'=>'disableTbReason()']) }} <label class="mTop-07 text-center">No </label>
+					{{ Form::text('stateDate', '', ['class'=>'l-6 drp-element text-center radius', 'placeholder'=>'State the Date', 'id'=>'dp2', 'data-date-minviewmode'=>'months', 'readOnly']) }}
 				</div>
 			</div>
 			<br>

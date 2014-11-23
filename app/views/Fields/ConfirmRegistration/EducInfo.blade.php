@@ -7,7 +7,7 @@
 <div class="large-10 columns large-centered">	
 	<div class="panel radius panel-body">
 		<div class="panel panel-header cus-pan-hd-3 radius">
-			<label class="size-22 label-black large-10 label-mg-left label-ln-ht-1">Educational Background</label>
+			<label class="size-22 label-white large-10 label-mg-left label-ln-ht-1">Educational Background</label>
 		</div>
 		<div class="panel-body">
 

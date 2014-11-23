@@ -19,7 +19,7 @@
 /*LABEL STYLES*/
 
 .welcome-label {
-	margin-left: 47rem;
+	margin-left: 52.1rem;
 }
 
 .label-ln-ht-1 {
@@ -301,11 +301,12 @@ margin-top: -1rem !important;
 	margin-top: -1.4rem !important;
 	margin-left: -1.3rem;
 	margin-right: -1.3rem;
-	background-image:  linear-gradient(to bottom,#f2dede 0,#ebcccc 100%);
-	border-color: #f2dede;
+	background-image: linear-gradient(to bottom,#337ab7 0,#2e6da4 100%);
+	border-color: #3b5998;
 	margin-bottom: 1.8rem;
 	border-bottom-right-radius: 0 !important;
 	border-bottom-left-radius: 0 !important;
+	color: White !important;
 }
 
 .panel-header-admin {

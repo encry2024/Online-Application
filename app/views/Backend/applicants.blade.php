@@ -11,7 +11,7 @@
 <div class="large-12 columns large-centered">	
 	<div class="panel radius panel-body">
 		<div class="panel panel-header-admin cus-pan-hd-3 radius">
-			<label class="size-22 label-black large-12 label-ln-ht-1">List of Applicants</label>
+			<label class="size-22 label-black large-12 label-ln-ht-1">Applicants</label>
 		</div>
 		<div class="panel-body">
 			<div class="push-11 large-3">{{ $applicants->links() }}</div>

@@ -1,11 +1,10 @@
 @extends('Template.Front')
 
 @section('head')
-<div class="large-12 columns large-centered">
-	<div class="panel radius custom-panel-1 header panel-hdr-border header-2">
+
+	<div class="large-12 panel custom-panel-1 header panel-hdr-border panel-bg-white">
 		<label class="size-22 label-title label-black">Online Registration Form </label>
 	</div>
-</div>
 @endsection
 
 @section('setScript')
@@ -47,7 +46,7 @@
 		});
 
 		$('#dp2').fdatepicker({
-			format: 'MM, yyyy',
+			format: 'mm/dd/yyyy',
 		});
 
 		$('#dp3').fdatepicker({
