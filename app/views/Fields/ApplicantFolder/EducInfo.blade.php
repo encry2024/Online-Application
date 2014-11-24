@@ -100,7 +100,7 @@
 
 				<div class="large-6 columns">
 					<label>Degree / Concentration / Major</label>
-					{{ Form::text('hseductitle', $applicant_info->hseductitle, ['class'=>'error text-center radius', 'placeholder'=>'Enter your Education Title']) }}
+					{{ Form::text('hseductitle', $applicant_info->hseductitle, ['class'=>'error text-center radius', 'placeholder'=>'Enter your Education Title', 'disabled']) }}
 					@if ($errors->has('hseductitle')) <small class="error">{{ $errors->first('hseductitle') }}</small> @endif
 				</div>
 			</div>

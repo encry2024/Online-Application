@@ -25,8 +25,8 @@
 
 				<div class="large-3 columns">
 					<label>Currently Employed?</label>
-					{{ Form::checkbox('cemployed', 'yes', $applicant_info->cemployed_1 == 'yes' ? 'checked' : '', ['class' => 'text-center mrgin-07']) }} <label class="mTop-07"> Yes </label>
-					{{ Form::checkbox('cemployed', 'No', $applicant_info->cemployed_1 == 'No' ? 'checked' : '', ['class' => 'text-center mrgin-07']) }} <label class="mTop-07"> No </label>
+					{{ Form::radio('cemployed', 'yes', $applicant_info->cemployed_1 == 'yes' ? 'checked' : '', ['class' => 'text-center mrgin-07']) }} <label class="mTop-07"> Yes </label>
+					{{ Form::radio('cemployed', 'No', $applicant_info->cemployed_1 == 'No' ? 'checked' : '', ['class' => 'text-center mrgin-07']) }} <label class="mTop-07"> No </label>
 					@if ($errors->has('cemployed')) <small class="error fi-alert"> {{ $errors->first('cemployed') }}</small> @endif
 				</div>
 
@@ -46,8 +46,8 @@
 			<div class="row">
 				<div class="large-5 columns">
 					<label>Previously Applied Here?</label>
-					{{ Form::checkbox('previouslyApp', 'Yes', $applicant_info->previouslyApp_1=='Yes'?'checked':'', ['id'=>'y_id','class' => 'text-center', 'onclick'=>'enableTbReason()']) }} <label> Yes </label>, <label class="mTop-07 text-center"> {{ Form::text('stateDate', $applicant_info->stateDate, ['class'=>'drp-element text-center radius', 'placeholder'=>'State the Date', 'id'=>'dp2', 'readOnly']) }} </label>
-					{{ Form::checkbox('previouslyApp', 'No', $applicant_info->previouslyApp_1 == 'No' ? 'checked' : '', ['id'=>'n_id', 'class' => 'text-center', 'onclick'=>'disableTbReason()']) }} <label class="mTop-07 text-center">No </label>
+					{{ Form::radio('previouslyApp', 'Yes', $applicant_info->previouslyApp_1=='Yes'?'checked':'', ['id'=>'y_id','class' => 'text-center', 'onclick'=>'enableTbReason()']) }} <label> Yes </label>, <label class="mTop-07 text-center"> {{ Form::text('stateDate', $applicant_info->stateDate, ['class'=>'drp-element text-center radius', 'placeholder'=>'State the Date', 'id'=>'dp2', 'readOnly']) }} </label>
+					{{ Form::radio('previouslyApp', 'No', $applicant_info->previouslyApp_1 == 'No' ? 'checked' : '', ['id'=>'n_id', 'class' => 'text-center', 'onclick'=>'disableTbReason()']) }} <label class="mTop-07 text-center">No </label>
 				</div>
 			</div>
 

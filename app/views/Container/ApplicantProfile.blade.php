@@ -24,12 +24,21 @@
 			var dte = new Date();
 			elem.value = dte.toLocaleDateString();
 		}
+
+		$('#sss').simpleMask({ 
+		  'mask': ['###-##-####'] 
+		});
+
+		$('#tin').simpleMask({ 
+		  'mask': ['##-#######'] 
+		});
+		
 		$('#dp1').fdatepicker({
 			format: 'mm/dd/yyyy',
 		});
 
 		$('#dp2').fdatepicker({
-			format: 'MM, yyyy',
+			format: 'mm/dd/yyyy',
 		});
 
 		$('#dp3').fdatepicker({

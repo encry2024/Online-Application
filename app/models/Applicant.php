@@ -59,12 +59,17 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		 	'placeofbirth' => 'required',
 		 	'sss' => 'required|alpha_dash',
 		 	'tin' => 'required|alpha_dash',
-		 	'hsname' => 'alpha_space_dash',
+
+		 	'hsname' => 'required|alpha_space_dash',
+		 	'hsschooladdress' => 'required',
+		 	'hsdateattended' => 'required',
+		 	'hsgraduate' => 'required',
 
 			'collegename' => 'alpha_space_dash',
 			'collegeeductitle' => 'alpha_space_dash',
 			'gradschoolname' => 'alpha_space_dash',
 			'gradeductitle' => 'alpha_space_dash',
+
 		 	'famname1' => 'required|alpha_space',
 		 	'famname2' => 'alpha_space',
 		 	'famname3' => 'alpha_space',
