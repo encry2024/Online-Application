@@ -136,10 +136,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 		// EDUCATION INFORMATION SECTION
 		$applicant_information->hsname 			= $data['hsname'];
-		$applicant_information->hseductitle 	= $data['hseductitle'];
 		$applicant_information->hsschooladdress = $data['hsschooladdress'];
 		$applicant_information->hsdateattended 	= $data['hsdateattended'];
 		$applicant_information->hsgraduate 		= $data['hsgraduate'];
+		
 		$applicant_information->collegename 	= $data['collegename'];
 		$applicant_information->collegeeductitle 		= $data['collegeeductitle'];
 		$applicant_information->collegeschooladdress 	= $data['collegeschooladdress'];

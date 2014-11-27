@@ -52,13 +52,13 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		 	'hometel' => 'numeric_dash|min:7',
 		 	'mobiletel' => 'required|numeric|digits:11',
 		 	'address' => 'required',
-		 	'religion' => 'alpha_space',
+		 	'religion' => 'required|alpha_space',
 		 	'civilstatus' => 'required|alpha_space',
 		 	'email' => 'required|email',
 		 	'dateofbirth' => 'required|before:1/1/1997',
 		 	'placeofbirth' => 'required',
-		 	'sss' => 'required|alpha_dash',
-		 	'tin' => 'required|alpha_dash',
+		 	'sss' => 'alpha_dash',
+		 	'tin' => 'alpha_dash',
 
 		 	'hsname' => 'required|alpha_space_dash',
 		 	'hsschooladdress' => 'required',
@@ -97,9 +97,9 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		 	'famphn5' => 'numeric',
 		 	'chkbx' => 'required',
 		 	'chkbx_2' => 'required',
-		 	'nme1' => 'alpha_space',
-		 	'nme2' => 'alpha_space',
-		 	'nme3' => 'alpha_space',
+		 	'nme1' => 'required|alpha_space',
+		 	'nme2' => 'required|alpha_space',
+		 	'nme3' => 'required|alpha_space',
 		 	'rel1' => 'alpha_space',
 		 	'rel2' => 'alpha_space',
 		 	'rel3' => 'alpha_space',
@@ -248,13 +248,10 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 
 			$applicant->nme1 = $data['nme1'];
 			$applicant->nme2 = $data['nme2'];
-			$applicant->nme3 = $data['nme3'];
 			$applicant->rel1 = $data['rel1'];
 			$applicant->rel2 = $data['rel2'];
-			$applicant->rel3 = $data['rel3'];
 			$applicant->addcon1 = $data['addcon1'];
 			$applicant->addcon2 = $data['addcon2'];
-			$applicant->addcon3 = $data['addcon3'];
 			$applicant->state_1 = $data['state_1'];
 			
 			// EMPLOYMENT INFORMATION SECTION
@@ -316,7 +313,7 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 			$audits->history = "Applicant " . $getApplicant_LastName . " " . $getApplicant_MiddleName . " " . $getApplicant_FirstName . " has been registered successfully. (Applicant ID: " . $getApplicant_ApplicantId . ") ";
 			$audits->save();
 			#Encrypt applicant's ID for security.
-			return Redirect::to('confirmRegistration' . Crypt::encrypt($applicantInfo->id));
+			return Redirect::to('confirmRegistration/' . Crypt::encrypt($applicantInfo->id));
 		}
 	}
 

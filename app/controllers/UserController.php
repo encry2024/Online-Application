@@ -22,6 +22,10 @@ class UserController extends BaseController {
 
 		return $updateApplicantInformation;
 	}
+
+	public function getNotif() {
+		Applicant::where('seen', '0')->update(array('seen' => 1));
+	}
 }
 
 

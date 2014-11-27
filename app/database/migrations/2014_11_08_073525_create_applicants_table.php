@@ -120,6 +120,7 @@ class CreateApplicantsTable extends Migration {
 			$table->string('pempemployeraddress_2');
 			$table->integer('pempcashcompensation_2');
 			$table->integer('Visited');
+			$table->integer('seen');
 			$table->timestamps();
 			$table->softDeletes();
 		});

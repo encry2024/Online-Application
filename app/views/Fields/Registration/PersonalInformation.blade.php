@@ -69,11 +69,11 @@
 				</div>
 				<div class="large-4 columns">
 					<label>Gender</label>
-					{{ Form::Select('gender', array('Male'=>'Male', 'Female'=>'Female'), '', array('class' => 'lHeight-1')) }}
+					{{ Form::Select('gender', array('Male'=>'Male', 'Female'=>'Female'), '', array('class' => 'lHeight-1 label-black')) }}
 				</div>
 				<div class="large-4 columns">
 					<label>Civil Status</label>
-					{{ Form::text('civilstatus', '', array('class'=>'error text-center radius', 'placeholder'=>'Enter your Civil Status')) }}
+					{{ Form::Select('civilstatus', array('Single'=>'Single', 'Married'=>'Married', 'Separated'=>'Separated', 'Widowed'=>'Widowed'), '', array('class' => 'lHeight-1 label-black error text-center radius', 'placeholder'=>'Enter your Civil Status')) }}
 					@if ($errors->has('civilstatus')) <small class="error fi-alert"> {{ $errors->first('civilstatus') }}</small> @endif
 				</div>
 			</div>

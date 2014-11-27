@@ -13,8 +13,8 @@
 
 
 #GET
-Route::get('/', function() {
-	return View::make('index');
+Route::get('index/', function() {
+	return View::make('Index.index');
 });
 
 Route::get('/registration', function() {
@@ -35,23 +35,46 @@ Route::get('register', function() {
 
 Route::get('Mainpage', function() {
 	$applicant = Applicant::paginate(25);
+	$app_Notify = Applicant::where('seen', '0')->get();
 
-	if (Request::ajax()) 
+	if ( Request::ajax() ) 
 	{ return Response::json(View::make('applicants', array('applicants' => $applicant))->render()); }
 
-	return View::make('Container.AdminContainer', array('applicants' => $applicant));
+	return View::make('Container.AdminContainer', array('applicants' => $applicant, 'notify' => count($app_Notify), 'getApp' => $app_Notify));
 });
 
+Route::get('retApp', function() {
+	return Applicant::all()->toJson();
+});
 
+Route::any('retrieve', function(){
+	$app_Notify = Applicant::where('seen', '=', '0')->get();
+	
+	return count($app_Notify);
+});
 
+Route::get('retrieveApplicants', function() {
+	$r_a = Applicant::where('seen', 0)->get()->toJson();
+	return $r_a;
+});
 
 Route::get('confirmRegistration/{id}', 'ApplicantController@getInfo');
+
+
+
+
+
 
 
 #POSTS
 Route::post('registeruser', 'UserController@registerUser');
 Route::post('register', 'ApplicantController@registerApplicant');
 Route::post('Applicant/{id}/Update', 'ApplicantController@updateApplicant');
+Route::post('notified', 'UserController@getNotif');
+
+
+
+
 
 
 
@@ -71,6 +94,10 @@ Route::group(array('before' => 'auth'), function() {
 	});
 });
 ########################
+
+
+
+
 
 
 

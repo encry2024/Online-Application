@@ -32,7 +32,7 @@
 
 				<div class="large-3 columns">
 					<label>Date of Application</label>
-					{{ Form::text('dateofapplication', $applicant_info->dateofapplication, ['class'=>'text-center radius', 'placeholder'=>'Enter your Date of Birth', 'id'=>'applicationdate'], 'readonly') }}
+					{{ Form::text('dateofapplication', $applicant_info->dateofapplication, ['class'=>'text-center radius', 'placeholder'=>'Enter your Date of Birth', 'id'=>'applicationdate', 'readOnly']) }}
 				</div>
 			</div>
 

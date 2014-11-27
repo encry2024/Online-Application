@@ -5,7 +5,7 @@
 
 <div class="large-12 columns large-centered">
 	<div class="panel radius custom-panel-1 panel-bg-white sticky fixed">
-		<label class="size-22 label-title label-black">{{ $applicant_info->firstname }} {{ $applicant_info->middle }} {{ $applicant_info->lastname }} 
+		<label class="size-22 label-title label-black">Applicant: {{ $applicant_info->firstname }} {{ $applicant_info->middle }} {{ $applicant_info->lastname }} 
 		</label>
 		<span class="welcome-label size-18">
 			{{ link_to('Mainpage', ' Homepage', ['class'=>'fi-home button a-bg label-black button-bg-sb right tiny homepage-link' ]) }}

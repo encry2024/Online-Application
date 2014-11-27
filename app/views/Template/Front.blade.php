@@ -6,7 +6,7 @@
 		{{ HTML::style('packages/foundation-5.4.7/css/foundation.css') }}
 		{{ HTML::style('packages/foundation-icons/foundation-icons.css') }}
 		{{ HTML::style('packages/foundation-icons/preview.html') }}
-
+		{{ HTML::style('packages/DataTables-1.10.4/media/css/jquery.dataTables.min.css') }}
 		{{ HTML::style('packages/custom-style/custom-style.css') }}
 		{{ HTML::style('packages/foundation-icons/foundation-icons.ttf') }}
 		{{ HTML::style('packages/foundation_icons_general/foundation_icons_general/stylesheets/general_foundicons.css') }}
@@ -27,9 +27,9 @@
 	</title>
 
 	<body @yield('setScript')>
-		{{ HTML::script('packages/foundation-5.4.7/js/vendor/jquery.js') }}
 		{{ HTML::script('packages/DataTables-1.10.4/media/js/jquery.js') }}
-		{{ HTML::script('ajax/libs/jquery/1.10.1/jquery.min.js') }}
+	
+		{{ HTML::script('packages/foundation-5.4.7/js/vendor/jquery.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/js/vendor/fastclick.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/js/foundation.min.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/js/foundation/foundation.topbar.js') }}
@@ -40,8 +40,6 @@
 		{{ HTML::script('packages/foundation-5.4.7/datepicker/custom.modernizr.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/datepicker/foundation-datepicker.js') }}
 		{{ HTML::script('packages/jscripts/moment.js') }}
-		{{ HTML::script('range-datepicker/js/jquery.dateRangePicker.js') }}
-		{{ HTML::script('range-datepicker/js/jquery.dateRangePicker.min.js') }}
 		{{ HTML::script('tiny-datepicker/js/jquery.datepicker.js') }}
 		{{ HTML::script('tiny-datepicker/js/jquery.datepicker.min.js') }}
 		{{ HTML::script('packages/jTables/jquery.dataTables.min.js') }}
@@ -51,17 +49,18 @@
 		{{ HTML::script('packages/foundation-5.4.7/js/foundation/foundation.tooltip.js') }}
 		{{ HTML::script('Input-Mask/dist/jquery.SimpleMask.js') }}
 		{{ HTML::script('packages/foundation-5.4.7/js/foundation/foundation.dropdown.js') }}
-		
-		<script>
-		  $(document).foundation();
-		</script>
-		
+		{{ HTML::script('packages/foundation-5.4.7/js/foundation/foundation.alert.js') }}
+		{{ HTML::script('packages/foundation-5.4.7/js/foundation/foundation.reveal.js') }}
+		{{ HTML::script('packages/DataTables-1.10.4/media/js/jquery.dataTables.min.js') }}
+		{{ HTML::script('packages/DataTables-1.10.4/media/js/jquery.dataTables.js') }}
 		<!-- BODY -->
 		@yield('body')
 
 		<!-- SCRIPTS -->
 		@yield('scripts')
-
+		<script>
+		  $(document).foundation();
+		</script>
 		<!-- CUSTOM STYLE -->
 		<style type="text/css">
 		body {

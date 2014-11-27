@@ -50,7 +50,10 @@ body {
   position: relative;
   cursor: auto; }
 
-a:hover {
+
+
+a.dtem:hover {
+  display: block;
   cursor: pointer; }
 
 img {
@@ -1404,7 +1407,6 @@ input[type="month"],
 input[type="week"],
 input[type="email"],
 input[type="number"],
-input[type="search"],
 input[type="tel"],
 input[type="time"],
 input[type="url"],
@@ -1425,6 +1427,7 @@ textarea {
   padding: 0.5rem;
   height: 2.3125rem;
   width: 100%;
+  margin-right: 3rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1481,6 +1484,7 @@ textarea {
   textarea:disabled {
     background-color: #dddddd;
     cursor: default; }
+
   input[type="text"][disabled], input[type="text"][readonly], fieldset[disabled] input[type="text"],
   input[type="password"][disabled],
   input[type="password"][readonly], fieldset[disabled]
@@ -5310,7 +5314,7 @@ table {
     font-size: 1rem;
     font-weight: bold; }
   table thead {
-    background: whitesmoke; }
+    background: transparent; }
     table thead tr th,
     table thead tr td {
       padding: 0.5rem 0.625rem 0.625rem;
@@ -5344,7 +5348,9 @@ table {
   table tr td {
     display: table-cell;
     line-height: 1.125rem; }
-
+    table tbody tr:hover {
+      background-color: #e7e7ff !important;
+    }
 .range-slider {
   display: block;
   position: relative;
