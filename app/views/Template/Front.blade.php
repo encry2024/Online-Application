@@ -86,7 +86,7 @@
 		max-height:100%;
 		max-width:100%;
 		
-		font-family:Trebuchet MS, Arial, 'Helvetica', sans-serif;
+		font-family:Trebuchet MS, Arial, 'lato_lig', sans-serif;
 		font-size:1em;
 		}
 	</style>

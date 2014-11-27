@@ -18,6 +18,7 @@
 			<div class="large-12 columns large-centered">
 				<div class="row">
 					<table id="example1" class="dtable large-12" style="width: 100%;">
+						
 					</table>
 				</div>
 			</div>

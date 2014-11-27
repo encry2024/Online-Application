@@ -50,7 +50,13 @@ body {
   position: relative;
   cursor: auto; }
 
+tr:hover a {
+    color: White !important;
+}
 
+tr:hover label {
+  color: White;
+}
 
 a.dtem:hover {
   display: block;
@@ -5349,7 +5355,8 @@ table {
     display: table-cell;
     line-height: 1.125rem; }
     table tbody tr:hover {
-      background-color: #e7e7ff !important;
+      background-color: #0079a1 !important;
+      color: White !important;
     }
 .range-slider {
   display: block;

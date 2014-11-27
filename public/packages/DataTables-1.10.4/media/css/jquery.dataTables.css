@@ -66,6 +66,11 @@ table.dataTable tbody th,
 table.dataTable tbody td {
   padding: 8px 10px;
   text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+table.dataTable tbody tr:first-child {
+  border-bottom-style: none;
 }
 table.dataTable.row-border tbody th, table.dataTable.row-border tbody td, table.dataTable.display tbody th, table.dataTable.display tbody td {
   border-top: 1px solid #dddddd;
@@ -425,7 +430,7 @@ table.dataTable td {
 .dataTables_wrapper .dataTables_processing,
 .dataTables_wrapper .dataTables_paginate {
   color: #333333;
-  font-size: 14;
+  font-size: 13px;
 }
 .dataTables_wrapper .dataTables_scroll {
   clear: both;

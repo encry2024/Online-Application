@@ -12,10 +12,14 @@
 <script>
 
     $(document).ready(function() {
+		$("tr").click(function(){
+		   window.location = "example.html";
+		 });
     	//
 	    $.getJSON("retApp",function(data) {
 	        $('#example1').dataTable({
 				"aaData": data,
+
 				//DISPLAYS THE VALUE
 				//sTITLE - HEADER
 				//MDATAPROP - TBODY
