@@ -47,7 +47,7 @@ Route::get('retApp', function() {
 	return Applicant::all()->toJson();
 });
 
-Route::any('retrieve', function(){
+Route::any('retrieve', function() {
 	$app_Notify = Applicant::where('seen', '=', '0')->get();
 	
 	return count($app_Notify);

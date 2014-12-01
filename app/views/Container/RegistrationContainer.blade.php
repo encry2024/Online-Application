@@ -3,7 +3,7 @@
 @section('head')
 
 	<div class="large-12 panel custom-panel-1 header panel-hdr-border panel-bg-white">
-		<label class="size-22 label-title label-black">Online Registration Form </label>
+		<label class="size-22 label-title label-white">Online Registration Form </label>
 	</div>
 @endsection
 

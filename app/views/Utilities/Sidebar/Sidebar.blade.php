@@ -3,10 +3,16 @@
 
 
 <div class="large-2 columns">
-	<div class="sidebar radius panel-bg-white">
+	<div class="radius">
 		<ul class="side-nav">
-		<br><br><br><br><br>
-			<li>{{ link_to('logout', 'Logout', ['class'=>'text-center']) }}</li>
+		<br><br><br>
+			<li>
+			<div id="retriever">
+				<a href="#" id="notifLink" data-reveal-id="myModal" class="laravel-fnt" style=" margin-right: -1rem; "> New Applicants
+					<span class="badge" id="content"></span>
+				</a>
+			</div>
+			</li>
 		</ul>
 	</div>
 </div>

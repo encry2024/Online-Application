@@ -23,7 +23,7 @@
 	</head>
 
 	<title>
-		NSI - Online Registration
+		NSI :: Online Application
 	</title>
 
 	<body @yield('setScript')>
@@ -55,7 +55,7 @@
 		{{ HTML::script('packages/DataTables-1.10.4/media/js/jquery.dataTables.js') }}
 		<!-- BODY -->
 		@yield('body')
-
+@yield('style')
 		<!-- SCRIPTS -->
 		@yield('scripts')
 		<script>
@@ -66,7 +66,9 @@
 		body {
 		margin:0;
 		padding:0;  
-		background: linear-gradient(to bottom, #ff6935, #4e1400);
+		
+		/*background-color: #f4726d;
+		/*background: linear-gradient(to bottom, #ff6935, #4e1400);*/
 		background-repeat:no-repeat;
 		background-attachment:fixed;
 		margin: 0;

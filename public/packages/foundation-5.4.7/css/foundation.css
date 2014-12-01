@@ -1119,7 +1119,10 @@ button, .button {
   color: white;
   transition: background-color 300ms ease-out; }
   button:hover, button:focus, .button:hover, .button:focus {
-    background-color: #007095; }
+    background-color: #ad4844; 
+    color: White;
+    border-color: #ad4844;
+  }
   button:hover, button:focus, .button:hover, .button:focus {
     color: white; }
   button.secondary, .button.secondary {
@@ -1175,11 +1178,12 @@ button, .button {
     padding-left: 1.75rem;
     font-size: 0.8125rem; }
   button.tiny, .button.tiny {
-    padding-top: 0.625rem;
+    padding-top: 0.4225rem;
     padding-right: 1.25rem;
-    padding-bottom: 0.6875rem;
+    padding-bottom: 0.4225rem;
     padding-left: 1.25rem;
-    font-size: 0.6875rem; }
+    font-size: 1.6875rem;
+    margin-bottom: 1rem; }
   button.expand, .button.expand {
     padding-right: 0;
     padding-left: 0;
@@ -1470,7 +1474,7 @@ textarea {
   input[type="url"]:focus,
   input[type="color"]:focus,
   textarea:focus {
-    background: #fafafa;
+    background: White;
     border-color: #999999;
     outline: none; }
   input[type="text"]:disabled,
@@ -5355,9 +5359,10 @@ table {
     display: table-cell;
     line-height: 1.125rem; }
     table tbody tr:hover {
-      background-color: #0079a1 !important;
+      background: #f4645f !important;
       color: White !important;
     }
+
 .range-slider {
   display: block;
   position: relative;

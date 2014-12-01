@@ -4,12 +4,12 @@
 
 
 <div class="large-12 columns large-centered">
-	<div class="panel radius custom-panel-1 panel-bg-white sticky fixed">
-		<label class="size-22 label-title label-black">Applicant: {{ $applicant_info->firstname }} {{ $applicant_info->middle }} {{ $applicant_info->lastname }} 
+	<div class="panel custom-panel-1 title-panel sticky fixed">
+		<label class="size-22 label-title label-white">Applicant: {{ $applicant_info->firstname }} {{ $applicant_info->middle }} {{ $applicant_info->lastname }} 
 		</label>
 		<span class="welcome-label size-18">
-			{{ link_to('Mainpage', ' Homepage', ['class'=>'fi-home button a-bg label-black button-bg-sb right tiny homepage-link' ]) }}
-			<button class="button button-bg label-black button-bg-sb right tiny" style=" margin-top: -1.3rem; font-size: 13px; " type="submit">
+			{{ link_to('Mainpage', ' Homepage', ['class'=>'radius fi-home button a-bg title-button right tiny homepage-link' ]) }}
+			<button class="radius button button-bg title-button right tiny" style=" margin-top: -1rem; font-size: 13px; " type="submit">
 				<i class="fi-pencil"></i>
 				<span>Update</span>
 			</button>

@@ -3,7 +3,7 @@
 
 
 <br>
-<div class="large-12 small-12 columns">
+<div class="large-10 small-12 columns large-centered mainpage-container right">
 	<div class="row">
 		<div class="large-12 small-12 large-centered">
 			<div class="applicantList">@include('Backend.applicants')</div>
@@ -16,6 +16,5 @@
 		<label class="size-22 label-black large-12 label-ln-ht-1">New Applicants</label>
 	</div>
 	<div id="abody">
-		
 	</div>
 </div>
