@@ -16,6 +16,7 @@ class CreateApplicantsTable extends Migration {
 		Schema::create('applicants', function($table) {
 			$table->increments('id');
 			$table->string('applicant_id');
+			$table->string('status');
 			$table->string('dateofapplication');
 			$table->string('positiondesired_1');
 			$table->integer('expectedsalary');
@@ -31,7 +32,7 @@ class CreateApplicantsTable extends Migration {
 			$table->string('middle');
 			$table->string('nickname');
 			$table->integer('hometel');
-			$table->integer('mobiletel');
+			$table->string('mobiletel');
 			$table->string('address');
 			$table->string('religion');
 			$table->text('gender');
@@ -119,8 +120,8 @@ class CreateApplicantsTable extends Migration {
 			$table->integer('phonenumber_2');
 			$table->string('pempemployeraddress_2');
 			$table->integer('pempcashcompensation_2');
+			$table->index('seen');
 			$table->integer('Visited');
-			$table->integer('seen');
 			$table->timestamps();
 			$table->softDeletes();
 		});

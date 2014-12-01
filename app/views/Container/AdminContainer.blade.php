@@ -28,6 +28,7 @@
 	        		{"sTitle": "#", "mDataProp": "id", "sClass": "size-14"},
 	        		{"sTitle": "Fullname", "sWidth": "267px", "mDataProp": "firstname"},
 	        		{"sTitle": "Applicant ID", "mDataProp": "applicant_id"},
+	        		{ "sTitle": "Status", "mDataProp": "status" },
 	        		{"sTitle": "Date Applied", "mDataProp": "dateofapplication"}
 	        	],
 	        	"aoColumnDefs": 
@@ -67,11 +68,20 @@
 
 					//dateofapplication
 					{
-						"aTargets": [ 3 ], // Column to target
+						"aTargets": [ 4 ], // Column to target
 						"mRender": function ( data, type, full ) {
 						// 'full' is the row's data object, and 'data' is this column's data
 						// e.g. 'full[0]' is the comic id, and 'data' is the comic title
 						return '<label class="text-center size-14">' + full["created_at"] + '</label>';
+						}
+					},
+
+					{
+						"aTargets": [ 3 ], // Column to target
+						"mRender": function ( data, type, full ) {
+						// 'full' is the row's data object, and 'data' is this column's data
+						// e.g. 'full[0]' is the comic id, and 'data' is the comic title
+						return '<label class="text-center size-14 alert-box warning alert-custom">' + full["status"] + '</label>';
 						}
 					}
 				],
@@ -105,6 +115,12 @@
 					}
 				}
 			});
+		var $container = $("#content");
+		$container.load("{{ URL::to('/') }}/retrieve");
+		var refreshId = setInterval( function() {
+			$container.load("{{ URL::to('/') }}/retrieve");
+		}, 1000);
+
 		});
         // rtrApplicants();
         //RETRIEVE SEEN COUNT
@@ -149,15 +165,6 @@
 			});
 		});
 	}
-
-	$(document).ready(function() {
-		var $container = $("#content");
-		$container.load("{{ URL::to('/') }}/retrieve");
-		var refreshId = setInterval( function() {
-			$container.load("{{ URL::to('/') }}/retrieve");
-		}, 1000);
-	});
-
 	// $(window).on('hashchange', function() {
 	//        if (window.location.hash) {
 	//            var page = window.location.hash.replace('#', '');

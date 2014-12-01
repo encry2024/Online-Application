@@ -22,6 +22,10 @@
 	color: #f4645f !important;
 }
 
+.alert-custom {
+	margin-bottom: 0rem;
+	line-height: 0rem;
+}
 
 .welcome-label {
 	margin-left: 52.1rem;
@@ -367,8 +371,6 @@ margin-top: -1rem !important;
 
 
 /* MARGINS */
-
-
 
 .panel-border {
 	border-color: #333333;

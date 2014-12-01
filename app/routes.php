@@ -13,6 +13,10 @@
 
 
 #GET
+Route::get('admin/register', function() {
+	return View::make('Container.AdminRegisterContainer');
+});
+
 Route::get('index/', function() {
 	return View::make('Index.index');
 });

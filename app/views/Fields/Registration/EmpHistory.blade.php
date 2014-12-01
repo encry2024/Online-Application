@@ -185,5 +185,5 @@
 			<br><br>
 		</div>
 	</div>
-		{{ Form::submit("Register", ['class'=>'button-bg button large-12 label-black button-bg-sb text-size-20 small right font-style-segoe']) }}
+		{{ Form::submit("Register", ['class'=>'radius login-btn button large-12 label-black text-size-20 small right font-style-segoe']) }}
 </div>
