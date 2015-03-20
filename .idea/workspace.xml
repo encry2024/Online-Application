@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c53a66d9-74bc-42cd-9942-b21eceddb31a" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\database\migrations\2014_11_01_074155_create_items_table.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\database\migrations\2014_11_01_164902_create_devices_table.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\database\migrations\2014_11_01_165005_create_fields_table.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\ApplicantProfile.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\BasicDetails.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Confirm-Page\BasicDetails.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Confirm-Page\Education.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Confirm-Page\EmploymentHistory.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Confirm-Page\Family.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Confirm-Page\Interview.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Confirm-Page\PersonalInformation.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Confirm-Page\errorContainer.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Login-Page\Login.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Mainpage\Container-Applicant-Information\BasicDetails.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Mainpage\Container-Applicant-Information\Education.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Mainpage\Container-Applicant-Information\EmploymentHistory.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Mainpage\Container-Applicant-Information\Family.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Mainpage\Container-Applicant-Information\Interview.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Mainpage\Container-Applicant-Information\PersonalInformation.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Mainpage\Container-Applicant-Information\applicantInformation.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Mainpage\Container-Applicant-Information\errorContainer.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Mainpage\MainPage.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Registration-Page\BasicDetails.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Registration-Page\Education.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Registration-Page\EmploymentHistory.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Registration-Page\Family.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Registration-Page\Interview.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Registration-Page\PersonalInformation.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Registration-Page\User.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Container-Registration-Page\errorContainer.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Education.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\EmploymentHistory.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Family.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\Interview.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\MOCK_DATA.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\PersonalInformation.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Container\errorContainer.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\ErrorPage.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Errors\errorCatcher.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\BasicDetails\basicdetails.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\ConfirmRegistrationFields\BasicDetails\basicdetails.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\ConfirmRegistrationFields\Education\coluni.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\ConfirmRegistrationFields\Education\gradStudy.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\ConfirmRegistrationFields\Education\hs.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\ConfirmRegistrationFields\Employment\currentEmployee.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\ConfirmRegistrationFields\Employment\pemp.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\ConfirmRegistrationFields\ErrorMessage\errorMessage.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\ConfirmRegistrationFields\Family\charRef.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\ConfirmRegistrationFields\Family\familyInformation.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\ConfirmRegistrationFields\Interview\finalr.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\ConfirmRegistrationFields\Interview\hrInterview.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\ConfirmRegistrationFields\Interview\jo.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\ConfirmRegistrationFields\Interview\operationsInterview.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\ConfirmRegistrationFields\Personal\personalinformation.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\Education\coluni.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\Education\gradStudy.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\Education\hs.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\Employment\currentEmployee.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\Employment\pemp.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\ErrorMessage\errorMessage.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\Family\charRef.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\Family\familyInformation.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\Interview\finalr.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\Interview\hrInterview.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\Interview\jo.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\Interview\operationsInterview.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\LoginFields\loginField.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\ApplicantInformationFields\ApplicantInformation.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\ApplicantInformationFields\BasicDetails\basicdetails.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\ApplicantInformationFields\Education\coluni.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\ApplicantInformationFields\Education\gradStudy.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\ApplicantInformationFields\Education\hs.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\ApplicantInformationFields\Employment\currentEmployee.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\ApplicantInformationFields\Employment\pemp.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\ApplicantInformationFields\ErrorMessage\errorMessage.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\ApplicantInformationFields\Family\charRef.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\ApplicantInformationFields\Family\familyInformation.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\ApplicantInformationFields\Interview\finalr.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\ApplicantInformationFields\Interview\hrInterview.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\ApplicantInformationFields\Interview\jo.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\ApplicantInformationFields\Interview\operationsInterview.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\ApplicantInformationFields\Personal\personalinformation.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\Mainpage-Error\webPageError.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\MainpageFields\mainpagetable.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\Personal\personalinformation.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\RegistrationFields\BasicDetails\basicdetails.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\RegistrationFields\Education\coluni.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\RegistrationFields\Education\gradStudy.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\RegistrationFields\Education\hs.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\RegistrationFields\Employment\currentEmployee.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\RegistrationFields\Employment\pemp.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\RegistrationFields\ErrorMessage\errorMessage.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\RegistrationFields\Family\charRef.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\RegistrationFields\Family\familyInformation.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\RegistrationFields\Interview\finalr.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\RegistrationFields\Interview\hrInterview.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\RegistrationFields\Interview\jo.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\RegistrationFields\Interview\operationsInterview.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\RegistrationFields\Personal\personalinformation.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Fields\RegistrationFields\Users\registerUser.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Sidebars\Sidebar-ApplicantProfile\sidebarApplicant.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Sidebars\Sidebar-Mainpage\Sidebar.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Templates\Outside.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Topbar\InfoPanel.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Topbar\Topbar.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\Topbar\applicantProfileTopBar.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\applicants.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\confirmRegistration.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\data\arrays.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\emails\auth\reminder.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\hello.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\login.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\mainPage.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\registerUser.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp 2\htdocs\nsi\application\app\views\registration.blade.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_11_08_073525_create_applicants_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_11_08_073525_create_applicants_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Container/AdminContainer.blade.php" afterPath="$PROJECT_DIR$/app/views/Container/AdminContainer.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Utilities/Topbar/AppTopBar.blade.php" afterPath="$PROJECT_DIR$/app/views/Utilities/Topbar/AppTopBar.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Applicant.php" afterPath="$PROJECT_DIR$/app/models/Applicant.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Container/ApplicantProfile.blade.php" afterPath="$PROJECT_DIR$/app/views/Container/ApplicantProfile.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Container/ConRegContainer.blade.php" afterPath="$PROJECT_DIR$/app/views/Container/ConRegContainer.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Fields/ApplicantFolder/EducInfo.blade.php" afterPath="$PROJECT_DIR$/app/views/Fields/ApplicantFolder/EducInfo.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Fields/Registration/EmpHistory.blade.php" afterPath="$PROJECT_DIR$/app/views/Fields/Registration/EmpHistory.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Template/Front.blade.php" afterPath="$PROJECT_DIR$/app/views/Template/Front.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Fields/Login/Login.blade.php" afterPath="$PROJECT_DIR$/app/views/Fields/Login/Login.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Container/LoginContainer.blade.php" afterPath="$PROJECT_DIR$/app/views/Container/LoginContainer.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Utilities/Sidebar/Sidebar.blade.php" afterPath="$PROJECT_DIR$/app/views/Utilities/Sidebar/Sidebar.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/User.php" afterPath="$PROJECT_DIR$/app/models/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/app.php" afterPath="$PROJECT_DIR$/app/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Backend/applicants.blade.php" afterPath="$PROJECT_DIR$/app/views/Backend/applicants.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/packages/custom-style/custom-style.css" afterPath="$PROJECT_DIR$/public/packages/custom-style/custom-style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Validations/custom_error_messages.php" afterPath="$PROJECT_DIR$/app/models/Validations/custom_error_messages.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/local/database.php" afterPath="$PROJECT_DIR$/app/config/local/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/filters.php" afterPath="$PROJECT_DIR$/app/filters.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/packages/foundation-5.4.7/css/foundation.css" afterPath="$PROJECT_DIR$/public/packages/foundation-5.4.7/css/foundation.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/packages/DataTables-1.10.4/media/css/jquery.dataTables.css" afterPath="$PROJECT_DIR$/public/packages/DataTables-1.10.4/media/css/jquery.dataTables.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/start.php" afterPath="$PROJECT_DIR$/bootstrap/start.php" />
+    </list>
+    <ignored path="application.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="application" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Login.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/Fields/Login/Login.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1564">
+              <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.243421" vertical-offset="2142" max-vertical-offset="8364">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Audit.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Audit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="340">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="SYNC_SETTING" value="DONT" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="AUTO_COMMIT_ON_CHERRY_PICK" value="true" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/app/views/Fields/Login/Login.blade.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fields" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fields" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/ile1yv0l.1qk/bin/git.exe" />
+    <property name="recentsLimit" value="5" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.Login.blade.php">
+    <configuration default="false" name="Login.blade.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/application/app/views/Fields/Login/Login.blade.php">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-env-vars>false</pass-parent-env-vars>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Login.blade.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Login.blade.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c53a66d9-74bc-42cd-9942-b21eceddb31a" name="Default" comment="" />
+      <created>1426833153574</created>
+      <option name="number" value="Default" />
+      <updated>1426833153574</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32779455" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/views/Fields/Login/Login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1564">
+          <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8364">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/Fields/Login/Login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1564">
+          <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Audit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="634">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.243421" vertical-offset="2142" max-vertical-offset="8364">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

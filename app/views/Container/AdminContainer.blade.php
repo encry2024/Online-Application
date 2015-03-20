@@ -1,24 +1,22 @@
 @extends('Template.Front')
 
 @section('head')
-@include('Utilities.Topbar.Topbar')
+	@include('Utilities.Topbar.Topbar')
 @endsection
 
 @section('body')
-@include('Utilities.Sidebar.Sidebar')
-@include('Fields.Admin.admin')
+	@include('Utilities.Sidebar.Sidebar')
+	@include('Fields.Admin.admin')
 @endsection
 
 @section('scripts')
 <script>
-
     $(document).ready(function() {
     	//
-
 	    $.getJSON("retApp",function(data) {
 	        $('#example1').dataTable({
 				"aaData": data,
-				"aaSorting": [[ 1, 'asc' ]],
+				"aaSorting": [[ 4, 'desc' ]],
 				//DISPLAYS THE VALUE
 				//sTITLE - HEADER
 				//MDATAPROP - TBODY
@@ -37,7 +35,6 @@
 	        		//ID
 	        		{ "bSortable": false, "aTargets": [ 0 ] },
 					{
-
 						"aTargets": [ 0 ], // Column to target
 						"mRender": function ( data, type, full ) {
 						// 'full' is the row's data object, and 'data' is this column's data
@@ -81,7 +78,10 @@
 						"mRender": function ( data, type, full ) {
 						// 'full' is the row's data object, and 'data' is this column's data
 						// e.g. 'full[0]' is the comic id, and 'data' is the comic title
-						return '<label class="text-center size-14 alert-box warning alert-custom">' + full["status"] + '</label>';
+						if ( full["status"] != "Hired" ) {
+							return '<label class="text-center size-14 alert-box radius warning alert-custom">' + full["status"] + '</label>';
+						} else
+							return '<label class="text-center size-14 alert-box radius success alert-custom">' + full["status"] + '</label>';
 						}
 					}
 				],
@@ -115,6 +115,7 @@
 					}
 				}
 			});
+
 		var $container = $("#content");
 		$container.load("{{ URL::to('/') }}/retrieve");
 		var refreshId = setInterval( function() {
@@ -143,7 +144,7 @@
                 },
                 error:function (xhr, ajaxOptions, thrownError){
                     alert(thrownError);
-                },
+                }
             });
         });
         
@@ -165,37 +166,7 @@
 			});
 		});
 	}
-	// $(window).on('hashchange', function() {
-	//        if (window.location.hash) {
-	//            var page = window.location.hash.replace('#', '');
-	//            if (page == Number.NaN || page <= 0) {
-	//                return false;
-	//            } else {
-	//                getPosts(page);
-	//            }
-	//        }
-	//    });
-
-	//    $(document).ready(function() {
-	//        $(document).on('click', '.pagination a', function (e) {
-	//            getPosts($(this).attr('href').split('page=')[1]);
-	//            e.preventDefault();
-	//        });
-	//    });
-
-	//    function getPosts(page) {
-	//        $.ajax({
-	//            url : '?page=' + page,
-	//            dataType: 'json',
-	//        }).done(function (data) {
-	//            $('.applicantList').html(data);
-	//            location.hash = page;
-	//        }).fail(function () {
-	//            alert('Applicants could not be loaded.');
-	//        });
-	//    }
 </script>
-
 @endsection
 
 

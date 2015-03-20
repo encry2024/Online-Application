@@ -102,7 +102,10 @@ img {
 
 img {
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle; 
+  margin-bottom: -3rem;
+  margin-left: -1rem;
+}
 
 textarea {
   height: auto;
@@ -3450,7 +3453,7 @@ ul.pagination {
       height: 0;
       padding: 0;
       list-style: none;
-      border-top-color: white; }
+      border-top-color: #ddd; }
     .side-nav li.heading {
       color: #008cba;
       font-size: 0.875rem;

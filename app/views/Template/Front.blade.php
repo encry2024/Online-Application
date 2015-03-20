@@ -19,7 +19,6 @@
 		{{ HTML::style('packages/foundation-5.4.7/css/normalize.css') }}
 		{{ HTML::style('packages/DataTables-1.10.4/media/css/jquery.dataTables.css') }}
 		@yield('head')
-
 	</head>
 
 	<title>

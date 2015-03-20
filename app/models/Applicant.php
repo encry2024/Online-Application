@@ -99,7 +99,6 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		 	'chkbx_2' => 'required',
 		 	'nme1' => 'required|alpha_space',
 		 	'nme2' => 'required|alpha_space',
-		 	'nme3' => 'required|alpha_space',
 		 	'rel1' => 'alpha_space',
 		 	'rel2' => 'alpha_space',
 		 	'rel3' => 'alpha_space',
@@ -122,7 +121,7 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		
 
 		//CUSTOM ERROR MESSAGES START...
-		// 09262933589
+		
 		include('Validations/custom_error_messages.php');
 		//CUSTOM ERROR MESSAGES END...
 
@@ -146,6 +145,7 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 			$applicant->cemployed_1 = $data['cemployed'];
 			$applicant->positiondesired_2 = $data['positiondesired_2'];
 			$applicant->previouslyApp_1 = $data['previouslyApp'];
+			$applicant->status = "Pending...";
 
 			if ( Input::get('stateDate') == "" ) 
 				{ $applicant->stateDate = ""; } 
@@ -319,7 +319,11 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 
 	public static function updateInfo($id, $data) {
 		$applicant_information = Applicant::find($id);
-		
+
+		#Applicant Status
+		$applicant_information->status 				= 	Input::get('app_status');
+		$applicant_information->employee_id 		= 	Input::get("employee_id");
+
 		#Applicant Informations:
 		$applicant_information->positiondesired_1 	= $data['positiondesired_1'];
 		$applicant_information->expectedsalary 		= $data['expectedsalary'];
@@ -338,9 +342,9 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 			{ $applicant_information->stateDate = $data['stateDate']; }
 		}
 
-		$applicant_information->nprequired = $data['nprequired'];
-		$applicant_information->source = $data['source'];
-		$applicant_information->referred = $data['referred'];
+		$applicant_information->nprequired 	= $data['nprequired'];
+		$applicant_information->source 		= $data['source'];
+		$applicant_information->referred 	= $data['referred'];
 
 		// PERSONAL INFORMATION SECTION
 		$applicant_information->lastname 		= $data['lastname'];
@@ -363,10 +367,10 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		#EDUCATION INFORMATION SECTION
 		$applicant_information->hsname 			= $data['hsname'];
 
-		$applicant_information->hsschooladdress = $data['hsschooladdress'];
-		$applicant_information->hsdateattended 	= $data['hsdateattended'];
-		$applicant_information->hsgraduate 		= $data['hsgraduate'];
-		$applicant_information->collegename 	= $data['collegename'];
+		$applicant_information->hsschooladdress			= $data['hsschooladdress'];
+		$applicant_information->hsdateattended 			= $data['hsdateattended'];
+		$applicant_information->hsgraduate 				= $data['hsgraduate'];
+		$applicant_information->collegename 			= $data['collegename'];
 		$applicant_information->collegeeductitle 		= $data['collegeeductitle'];
 		$applicant_information->collegeschooladdress 	= $data['collegeschooladdress'];
 		$applicant_information->collegedateattended 	= $data['collegedateattended'];
@@ -464,6 +468,10 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		
 		$applicant_information->save();
 
-		return Redirect::to('/');
+		if( Input::get("submit_type") == "confirm" ) {
+			return Redirect::to('/');
+		} else {
+			return Redirect::back()->with('message', 'Applicant was successfully updated.');
+		}
 	}
 }

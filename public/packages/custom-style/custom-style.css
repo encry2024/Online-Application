@@ -71,6 +71,10 @@
 	line-height: 0;
 }
 
+.success-Message {
+	color: 
+}
+
 .error-Message {
 	color: #ce0000;
 }
@@ -135,7 +139,7 @@
 }
 
 .label-white {
-	color: White;
+	color: White !important;
 }
 
 .label-mg-left {
@@ -245,6 +249,11 @@
 
 .li-background-none {
 	background-color: transparent !important;
+}
+
+.success-panel {
+	background-color: #e4f4ea;
+	border-color: #368a55;
 }
 
 .error-Panel {
@@ -372,6 +381,10 @@ margin-top: -1rem !important;
 
 /* MARGINS */
 
+.sidebar-button {
+	margin-right: -1rem;
+}
+
 .panel-border {
 	border-color: #333333;
 	border-width: 2px;
@@ -410,7 +423,7 @@ margin-top: -1rem !important;
 /*FONT STYLES - font family, color, size*/
 
 .size-30 {
-	font-size: 30;
+	font-size: 30px !important;
 }
 
 .size-22 {
@@ -422,7 +435,7 @@ margin-top: -1rem !important;
 }
 
 .size-26 {
-	font-size: 26;
+	font-size: 26px;
 }
 
 .size-24 {
@@ -554,10 +567,11 @@ margin-top: -1rem !important;
 	line-height: 3;
 }
 
-
 input[type=search]:focus, textarea:focus {
-	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-	border: 1px solid rgba(81, 203, 238, 1);
+border-color: #66afe9;
+outline: 0;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
 }
 
 input[type="search"], textarea {
@@ -576,7 +590,7 @@ input[type="search"], textarea {
   margin: 0 0 1rem 0;
   padding: 0.5rem;
   height: 1.3125rem;
-  width: 100%;
+  width: 110%;
   margin-right: 3rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -584,13 +598,17 @@ input[type="search"], textarea {
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out; }
 
 input[type=text]:focus, textarea:focus {
-	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-	border: 1px solid rgba(81, 203, 238, 1);
+border-color: #66afe9;
+outline: 0;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
 }
 
 input[type=password]:focus, textarea:focus {
-	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-	border: 1px solid rgba(81, 203, 238, 1);
+border-color: #66afe9;
+outline: 0;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
 }
 
 
@@ -607,14 +625,32 @@ input[type=password]:focus, textarea:focus {
 	padding-right: 5px !important;
 	border-radius: 5px !important;
 	color: White !important;
-	margin-left: 50px !important;
+	margin-left: 45px !important;
 }
 
-
+/*.menu-1:hover {
+	background: rgba(0, 0, 0, 0.05) !important;
+	color: #1cc7ff;
+}
+*/
 /* DIVs */
 
 .mainpage-container {
 	background-color: white;
 	margin-top: -3.4rem;
-	padding-bottom: 7rem;
+	padding-bottom: 3rem;
+}
+
+.login-container {
+	border-top-left-radius: 7px !important;
+	border-top-right-radius: 7px !important;
+	border-bottom-left-radius: 7px !important;
+	border-bottom-right-radius: 7px !important;
+}
+
+.ds-1 {
+	border-top-left-radius: 7px !important;
+	border-top-right-radius: 7px !important;
+	border-bottom-left-radius: 7px !important;
+	border-bottom-right-radius: 7px !important;
 }

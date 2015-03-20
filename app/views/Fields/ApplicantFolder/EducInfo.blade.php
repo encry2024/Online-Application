@@ -114,13 +114,13 @@
 
 				<div class="large-4 columns">
 					<label>Date Attended</label>
-					{{ Form::text('hsdateattended', $applicant_info->hsdateattended, ['class'=>'drp-element error text-center radius', 'placeholder'=>'Date you Attend', 'id'=>'dp5']) }}
+					{{ Form::text('hsdateattended', $applicant_info->hsdateattended, ['class'=>'drp-element error text-center radius', 'placeholder'=>'Date you Attend', 'id'=>'dp7']) }}
 					@if ($errors->has('hsdateattended')) <small class="error">{{ $errors->first('hsdateattended') }}</small> @endif
 				</div>
 				
 				<div class="large-4 columns">
 					<label>Mo. & Yr. Of Graduation</label>
-					{{ Form::text('hsgraduate', $applicant_info->hsgraduate, ['class'=>'drp-element error text-center radius', 'placeholder'=>'Date you Graduated', 'id'=>'dp6']) }}
+					{{ Form::text('hsgraduate', $applicant_info->hsgraduate, ['class'=>'drp-element error text-center radius', 'placeholder'=>'Date you Graduated', 'id'=>'dp8']) }}
 					@if ($errors->has('hsgraduate')) <small class="error">{{ $errors->first('hsgraduate') }}</small> @endif
 				</div>
 			</div>

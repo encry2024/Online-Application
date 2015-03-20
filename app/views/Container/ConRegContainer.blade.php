@@ -18,6 +18,8 @@
 		@include('Fields.ConfirmRegistration.EducInfo')
 		@include('Fields.ConfirmRegistration.EmpHistory')
 	</div>
+	{{ Form::hidden('submit_type', 'confirm') }}
+	{{ Form::hidden('app_status', 'Pending...') }}
 {{ Form::close() }}
 @endsection
 

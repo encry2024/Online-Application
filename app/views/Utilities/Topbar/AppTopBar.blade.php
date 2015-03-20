@@ -8,6 +8,7 @@
 		<label class="size-22 label-title label-white">Applicant: {{ $applicant_info->firstname }} {{ $applicant_info->middle }} {{ $applicant_info->lastname }} 
 		</label>
 		<span class="welcome-label size-18">
+		<a rel="nofollow" href="{{ URL::to('/') }}/print/employee/{{ $applicant_info->id }}" class="radius fi-page-export-pdf button a-bg title-button right tiny homepage-link"> Download to PDF</a>
 			{{ link_to('Mainpage', ' Homepage', ['class'=>'radius fi-home button a-bg title-button right tiny homepage-link' ]) }}
 			<button class="radius button button-bg title-button right tiny" style=" margin-top: -1rem; font-size: 13px; " type="submit">
 				<i class="fi-pencil"></i>

@@ -16,6 +16,7 @@ class CreateApplicantsTable extends Migration {
 		Schema::create('applicants', function($table) {
 			$table->increments('id');
 			$table->string('applicant_id');
+			$table->string('employee_id');
 			$table->string('status');
 			$table->string('dateofapplication');
 			$table->string('positiondesired_1');

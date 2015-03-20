@@ -11,6 +11,21 @@
 |
 */
 
+Route::get('redirect/survey', function() {
+	return Redirect::to( URL::to('../../survey/public/') );
+});
+
+Route::get('getEnv', function() {
+	return App::environment();
+});
+
+Route::get('checkAuth', function() {
+	$user_logged = User::where('status', '1')->first();
+	if ($user_logged->status != 1) {
+		return "false";
+	}
+	return Redirect::to( URL::to('../../NorthStar-Survey/public/') );
+});
 
 #GET
 Route::get('admin/register', function() {
@@ -23,6 +38,10 @@ Route::get('index/', function() {
 
 Route::get('/registration', function() {
 	return View::make('Container.RegistrationContainer');
+});
+
+Route::get('/', function() {
+	return Redirect::to('login');
 });
 
 Route::get('login', function() {
@@ -47,8 +66,16 @@ Route::get('Mainpage', function() {
 	return View::make('Container.AdminContainer', array('applicants' => $applicant, 'notify' => count($app_Notify), 'getApp' => $app_Notify));
 });
 
+Route::get('getEmployee', function() {
+	return Applicant::where('status', 'Hired')->orderBy('created_at', 'desc')->get()->toJson();
+});
+
 Route::get('retApp', function() {
 	return Applicant::all()->toJson();
+});
+
+Route::get('rtvApp', function() {
+	return Applicant::where('status', 'Hired')->get()->toJson();
 });
 
 Route::any('retrieve', function() {
@@ -62,7 +89,35 @@ Route::get('retrieveApplicants', function() {
 	return $r_a;
 });
 
+Route::get('fetch/{id}/employee', function( $id ) {
+	return Applicant::where('employee_id', $id)->get()->toJson();
+});
+
 Route::get('confirmRegistration/{id}', 'ApplicantController@getInfo');
+
+Route::get('retrnName', function() {
+	if (Auth::guest()) {
+		if (Request::ajax()) {
+			return Redirect::to('login');
+		}
+	} else {
+		$user = User::where('username', Auth::user()->username)->get()->toJson();
+		return $user;
+	}
+});
+
+
+
+
+#PDF route
+Route::get('print/employee/{id}', function($id) {
+	$data['employee'] 			= Applicant::find($id);
+
+	$pdf = PDF::loadView('Container.pdf_container', $data);
+	return $pdf->stream("Employee.pdf");
+});
+
+
 
 
 
@@ -98,10 +153,6 @@ Route::group(array('before' => 'auth'), function() {
 	});
 });
 ########################
-
-
-
-
 
 
 

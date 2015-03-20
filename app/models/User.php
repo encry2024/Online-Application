@@ -61,8 +61,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 			$audits->save();
 
 			return Redirect::to('login');
-			}
 		}
+	}
 
 	public static function validateLogin($data) {
 		$rules = array(

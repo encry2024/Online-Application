@@ -1,17 +1,19 @@
 @extends('Template.Front')
 
 @section('body')
-{{ Form::open(array('url'=>$applicant_info->id.'/Update')) }}
-@include('Utilities.Topbar.AppTopBar')
+{{ Form::open(array('url'=>'Applicant/'.$applicant_info->id.'/Update')) }}
+	@include('Utilities.Topbar.AppTopBar')
 
-<!-- FIELDS -->
-@include('Fields.ApplicantFolder.RegErrors')
-@include('Fields.ApplicantFolder.BasicDetails')
-@include('Fields.ApplicantFolder.PersonalInformation')
-@include('Fields.ApplicantFolder.FamilyDetails')
-@include('Fields.ApplicantFolder.EducInfo')
-@include('Fields.ApplicantFolder.EmpHistory')
-<!--  -->
+	<!-- FIELDS -->
+	@include('Fields.ApplicantFolder.RegErrors')
+	@include('Fields.ApplicantFolder.applicantstatus')
+	@include('Fields.ApplicantFolder.BasicDetails')
+	@include('Fields.ApplicantFolder.PersonalInformation')
+	@include('Fields.ApplicantFolder.FamilyDetails')
+	@include('Fields.ApplicantFolder.EducInfo')
+	@include('Fields.ApplicantFolder.EmpHistory')
+	<!--  -->
+	{{ Form::hidden('submit_type', 'app_prof') }}
 {{ Form::close() }}
 
 @endsection
