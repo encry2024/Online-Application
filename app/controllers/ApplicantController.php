@@ -19,7 +19,7 @@ class ApplicantController extends BaseController {
 		{ return View::make('Container.ConRegContainer')->with('applicant_info', $get_info); }
 		#Else. Display error
 		else
-		{ return View::make('ErrorPage'); }
+		{ return View::make('Fields.errors.ErrorPage'); }
 	}
 
 	public function updateApplicant($id) {

@@ -64,7 +64,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		}
 	}
 
-	public static function validateLogin($data) {
+    /**
+     * @param $data
+     * @return mixed
+     */
+    public static function validateLogin($data) {
 		$rules = array(
 			'username' => 'required',
 			'password' => 'required'

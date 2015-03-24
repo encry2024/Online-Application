@@ -44,31 +44,31 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		$rules = array(
 			'positiondesired_1' => 'required|alpha_space_dash',
 			'positiondesired_2' => 'alpha_space_dash',
-		 	'expectedsalary' => 'required|numeric',
-		 	'cemployed' => 'required',
-		 	'lastname' => 'required|alpha_space',
-		 	'firstname' => 'required|alpha_space',
-		 	'middle' => 'required|alpha_space',
-		 	'hometel' => 'numeric_dash|min:7',
-		 	'mobiletel' => 'required|numeric|digits:11',
-		 	'address' => 'required',
-		 	'religion' => 'required|alpha_space',
-		 	'civilstatus' => 'required|alpha_space',
-		 	'email' => 'required|email',
-		 	'dateofbirth' => 'required|before:1/1/1997',
-		 	'placeofbirth' => 'required',
-		 	'sss' => 'alpha_dash',
-		 	'tin' => 'alpha_dash',
+		 	'expectedsalary' 	=> 'required|numeric',
+		 	'cemployed' 		=> 'required',
+		 	'lastname' 			=> 'required|alpha_space',
+		 	'firstname' 		=> 'required|alpha_space',
+		 	'middle' 			=> 'required|alpha_space',
+		 	'hometel' 			=> 'numeric_dash|min:7',
+		 	'mobiletel' 		=> 'required|numeric|digits:11',
+		 	'address' 			=> 'required',
+		 	'religion' 			=> 'required|alpha_space',
+		 	'civilstatus' 		=> 'required|alpha_space',
+		 	'email' 			=> 'required|email',
+		 	'dateofbirth' 		=> 'required|before:1/1/1997',
+		 	'placeofbirth' 		=> 'required',
+		 	'sss' 				=> 'alpha_dash',
+		 	'tin' 				=> 'alpha_dash',
 
-		 	'hsname' => 'required|alpha_space_dash',
-		 	'hsschooladdress' => 'required',
-		 	'hsdateattended' => 'required',
-		 	'hsgraduate' => 'required',
+		 	'hsname' 			=> 'required|alpha_space_dash',
+		 	'hsschooladdress' 	=> 'required',
+		 	'hsdateattended' 	=> 'required',
+		 	'hsgraduate' 		=> 'required',
 
-			'collegename' => 'alpha_space_dash',
-			'collegeeductitle' => 'alpha_space_dash',
-			'gradschoolname' => 'alpha_space_dash',
-			'gradeductitle' => 'alpha_space_dash',
+			'collegename' 		=> 'alpha_space_dash',
+			'collegeeductitle' 	=> 'alpha_space_dash',
+			'gradschoolname' 	=> 'alpha_space_dash',
+			'gradeductitle' 	=> 'alpha_space_dash',
 
 		 	'famname1' => 'required|alpha_space',
 		 	'famname2' => 'alpha_space',
@@ -95,7 +95,7 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		 	'famphn3' => 'numeric',
 		 	'famphn4' => 'numeric',
 		 	'famphn5' => 'numeric',
-		 	'chkbx' => 'required',
+		 	'chkbx'	=> 'required',
 		 	'chkbx_2' => 'required',
 		 	'nme1' => 'required|alpha_space',
 		 	'nme2' => 'required|alpha_space',
@@ -121,9 +121,7 @@ class Applicant extends Eloquent implements UserInterface, RemindableInterface {
 		
 
 		//CUSTOM ERROR MESSAGES START...
-		
 		include('Validations/custom_error_messages.php');
-		//CUSTOM ERROR MESSAGES END...
 
 		//create validation instance
 		$validation = Validator::make($data, $rules, $messages);

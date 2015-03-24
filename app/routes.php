@@ -12,19 +12,23 @@
 */
 
 Route::get('redirect/survey', function() {
-	return Redirect::to( URL::to('../../survey/public/') );
+	return Redirect::to( URL::to('../../survey/public/mainpage') );
 });
 
-Route::get('getEnv', function() {
-	return App::environment();
+Route::get('checkAuthentication', function() {
+	If (Auth::guest()) {
+		return "true";
+	}
+
+	return View::make('errorpage');
 });
 
 Route::get('checkAuth', function() {
-	$user_logged = User::where('status', '1')->first();
-	if ($user_logged->status != 1) {
-		return "false";
+	if (Auth::check()) {
+		return "true";
 	}
-	return Redirect::to( URL::to('../../NorthStar-Survey/public/') );
+
+	return "false";
 });
 
 #GET
@@ -49,7 +53,7 @@ Route::get('login', function() {
 });
 
 Route::get('ErrorPage', function() {
-	return View::make('ErrorPage');
+	return View::make('errors.ErrorPage');
 });
 
 Route::get('register', function() {
@@ -96,14 +100,11 @@ Route::get('fetch/{id}/employee', function( $id ) {
 Route::get('confirmRegistration/{id}', 'ApplicantController@getInfo');
 
 Route::get('retrnName', function() {
-	if (Auth::guest()) {
-		if (Request::ajax()) {
-			return Redirect::to('login');
-		}
-	} else {
+	if (Auth::check()) {
 		$user = User::where('username', Auth::user()->username)->get()->toJson();
 		return $user;
 	}
+	return Redirect::to( URL::to('../../application/public/login') );
 });
 
 

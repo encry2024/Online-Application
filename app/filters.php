@@ -14,6 +14,12 @@
 App::before(function($request)
 {
 	//
+	$bag = Session::getMetadataBag();
+	$max = Config::get('session.lifetime') * 60;
+
+	if ($bag && $max < (time() - $bag->getLastUsed())) {
+		Event::fire('idle.too-long');
+	}
 });
 
 
